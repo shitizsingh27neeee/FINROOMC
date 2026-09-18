@@ -1,0 +1,6 @@
+{
+  "name": "Finance Escape Room",
+  "description": "Interactive finance learning game where Pluto the Labrador solves Indian corporate finance puzzles to reunite with Abhishek on Floor 5 of Goldman Sachs Bangalore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Abhishek - Finance Professional & Pluto's Loving Owner -->
+  <defs>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8B888"/>
+      <stop offset="100%" stop-color="#D49E6A"/>
+    </linearGradient>
+    <linearGradient id="navyShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0A2463"/>
+    </linearGradient>
+    <linearGradient id="hairDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D2D2D"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="portraitShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Warm Circle -->
+  <circle cx="100" cy="100" r="92" fill="#F8FAFC" stroke="#3B82F6" stroke-width="4"/>
+  <circle cx="100" cy="100" r="88" fill="#EFF6FF"/>
+
+  <!-- Torso / Shoulders (Navy Shirt) -->
+  <g filter="url(#portraitShadow)">
+    <path d="M40,192 C42,150 70,140 100,140 C130,140 158,150 160,192 Z" fill="url(#navyShirt)"/>
+    <!-- Shirt Collar -->
+    <polygon points="100,154 82,140 96,138 100,146 104,138 118,140" fill="#FFFFFF"/>
+    <polygon points="100,154 90,140 100,145 110,140" fill="#E2E8F0"/>
+    
+    <!-- Goldman Sachs Style Lanyard -->
+    <path d="M78,145 L94,185 L97,185 L84,145" fill="#3B82F6"/>
+    <path d="M122,145 L106,185 L103,185 L116,145" fill="#3B82F6"/>
+    <!-- ID Badge Clip -->
+    <rect x="94" y="180" width="12" height="18" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1"/>
+    <rect x="96" y="184" width="8" height="4" fill="#0A2463"/>
+  </g>
+
+  <!-- Neck -->
+  <rect x="88" y="118" width="24" height="24" rx="6" fill="url(#skinTone)"/>
+  <path d="M88,130 Q100,136 112,130 L112,142 L88,142 Z" fill="#C58C58" opacity="0.4"/>
+
+  <!-- Head & Face -->
+  <g filter="url(#portraitShadow)">
+    <!-- Ears -->
+    <ellipse cx="64" cy="94" rx="7" ry="11" fill="url(#skinTone)"/>
+    <ellipse cx="64" cy="94" rx="4" ry="7" fill="#C58C58"/>
+    <ellipse cx="136" cy="94" rx="7" ry="11" fill="url(#skinTone)"/>
+    <ellipse cx="136" cy="94" rx="4" ry="7" fill="#C58C58"/>
+
+    <!-- Face Shape -->
+    <path d="M68,82 C68,58 76,50 100,50 C124,50 132,58 132,82 C132,108 122,126 100,126 C78,126 68,108 68,82 Z" fill="url(#skinTone)"/>
+
+    <!-- Stylish Short Black Hair -->
+    <path d="M64,74 C62,50 78,34 100,34 C122,34 138,50 136,74 C134,60 126,44 102,44 C84,44 70,56 64,74 Z" fill="url(#hairDark)"/>
+    <path d="M64,74 C68,64 78,54 94,52 C114,50 128,58 136,68 C135,55 125,40 100,40 C75,40 65,58 64,74 Z" fill="#2D2D2D"/>
+
+    <!-- Eyebrows -->
+    <path d="M75,72 Q85,68 93,73" fill="none" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M107,73 Q115,68 125,72" fill="none" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Friendly Eyes -->
+    <ellipse cx="84" cy="81" rx="4" ry="4.5" fill="#111827"/>
+    <circle cx="83" cy="79.5" r="1.5" fill="#FFFFFF"/>
+    <ellipse cx="116" cy="81" rx="4" ry="4.5" fill="#111827"/>
+    <circle cx="115" cy="79.5" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Modern Rectangular Glasses -->
+    <!-- Left Lens Frame -->
+    <rect x="74" y="73" width="20" height="16" rx="4" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <!-- Right Lens Frame -->
+    <rect x="106" y="73" width="20" height="16" rx="4" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <!-- Bridge -->
+    <line x1="94" y1="80" x2="106" y2="80" stroke="#0F172A" stroke-width="2"/>
+    <!-- Temples -->
+    <line x1="74" y1="78" x2="64" y2="76" stroke="#0F172A" stroke-width="2"/>
+    <line x1="126" y1="78" x2="136" y2="76" stroke="#0F172A" stroke-width="2"/>
+    <!-- Glass Glare -->
+    <line x1="77" y1="76" x2="83" y2="86" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+    <line x1="109" y1="76" x2="115" y2="86" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+
+    <!-- Nose -->
+    <path d="M98,82 L101,94 L97,95" fill="none" stroke="#B87D48" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Warm Encouraging Smile -->
+    <path d="M88,104 Q100,114 112,104" fill="none" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M89,104 Q100,111 111,104" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Small Doodled Paw & Heart on Badge -->
+  <g transform="translate(142, 140) scale(0.7)">
+    <circle cx="15" cy="15" r="14" fill="#FEF08A" stroke="#F59E0B" stroke-width="2"/>
+    <path d="M15,10 C15,7 11,6 9,9 C7,12 15,19 15,19 C15,19 23,12 21,9 C19,6 15,7 15,10 Z" fill="#EF4444"/>
+  </g>
+</svg>

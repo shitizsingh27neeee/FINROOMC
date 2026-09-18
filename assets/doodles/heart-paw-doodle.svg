@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Heart with Paw Print Inside -->
+  <path d="M50,85 C50,85 15,55 15,35 C15,20 28,12 40,18 C46,21 50,28 50,28 C50,28 54,21 60,18 C72,12 85,20 85,35 C85,55 50,85 50,85 Z" fill="#FEE2E2" stroke="#EF4444" stroke-width="3"/>
+  <!-- Paw in middle -->
+  <g fill="#EF4444">
+    <ellipse cx="50" cy="52" rx="10" ry="8"/>
+    <circle cx="39" cy="40" r="3.5"/>
+    <circle cx="46" cy="35" r="3.5"/>
+    <circle cx="54" cy="35" r="3.5"/>
+    <circle cx="61" cy="40" r="3.5"/>
+  </g>
+</svg>

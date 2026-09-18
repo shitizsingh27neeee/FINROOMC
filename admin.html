@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMS - Finance Escape Room</title>
+  <meta name="description" content="Content Management System for Finance Escape Room. Add, edit, import, and export finance questions.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/admin-style.css">
+</head>
+<body class="admin-body">
+
+  <!-- ==================== AUTHENTICATION GATE ==================== -->
+  <div class="auth-gate-wrapper" id="adminAuthGate">
+    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔐</div>
+    <h2 style="font-size: 1.4rem; font-weight: 800; color: #0A2463; margin-bottom: 0.25rem;">
+      CMS Portal Login
+    </h2>
+    <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 1.5rem;">
+      Finance Escape Room Question Management
+    </p>
+
+    <form id="adminLoginForm">
+      <div style="margin-bottom: 1.25rem; text-align: left;">
+        <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 0.35rem;">
+          Admin Password
+        </label>
+        <input type="password" id="adminPasswordInput" class="form-control" placeholder="Enter password (default: finance123)" required autofocus>
+      </div>
+
+      <div id="adminLoginError" class="hidden" style="color: var(--error); font-size: 0.82rem; margin-bottom: 1rem;"></div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.65rem;">
+        Enter CMS Dashboard →
+      </button>
+
+      <div style="margin-top: 1.5rem; border-top: 1px solid #E2E8F0; padding-top: 1rem;">
+        <a href="/" style="font-size: 0.85rem; color: #64748B; font-weight: 600;">
+          ← Back to Game
+        </a>
+      </div>
+    </form>
+  </div>
+
+  <!-- ==================== MAIN ADMIN APPLICATION ==================== -->
+  <div id="adminMainApp" class="hidden">
+    <!-- Admin Top Header -->
+    <header class="admin-header">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; height: 64px;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <a href="/" class="btn-sm btn-outline" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+              <span>←</span>
+              <span>Back to Game</span>
+            </a>
+            <div>
+              <h1 style="font-size: 1.15rem; font-weight: 800; color: #0A2463;">
+                Finance Escape Room CMS
+              </h1>
+              <p style="font-size: 0.72rem; color: #64748B;">Curriculum Management & Question Authoring</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <button class="btn-sm btn-outline" id="btnAdminLogout" style="color: var(--error); border-color: #FECDD3;">
+              Log Out
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="admin-nav-bar">
+        <div class="container">
+          <div class="admin-nav-tabs">
+            <button class="admin-nav-tab active" data-view="questions">
+              📋 All Questions
+            </button>
+            <button class="admin-nav-tab" data-view="import-export">
+              📦 Import / Export
+            </button>
+            <button class="admin-nav-tab" data-view="analytics">
+              📈 Analytics & Insights
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Admin Body -->
+    <main style="padding: 1.75rem 0 4rem;">
+      <div class="container">
+
+        <!-- Quick Stats Overview -->
+        <div class="stat-grid">
+          <div class="stat-widget">
+            <span class="stat-label">Total Questions</span>
+            <span class="stat-value" id="statTotalQuestions">0</span>
+            <span class="text-xs text-secondary">In default & custom banks</span>
+          </div>
+          <div class="stat-widget">
+            <span class="stat-label">Custom Questions</span>
+            <span class="stat-value text-navy" id="statCustomQuestions">0</span>
+            <span class="text-xs text-secondary">Authored via CMS or imported</span>
+          </div>
+          <div class="stat-widget">
+            <span class="stat-label">Student Attempts</span>
+            <span class="stat-value" id="statTotalAttempts">0</span>
+            <span class="text-xs text-secondary">Recorded answers in local runtime</span>
+          </div>
+          <div class="stat-widget">
+            <span class="stat-label">Global Accuracy</span>
+            <span class="stat-value text-success" id="statGlobalAccuracy">0%</span>
+            <span class="text-xs text-secondary">Passing target is 80%</span>
+          </div>
+        </div>
+
+        <!-- ==================== VIEW: ALL QUESTIONS ==================== -->
+        <div class="admin-view-panel" data-view="questions">
+          <!-- Filters & Actions -->
+          <div class="admin-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+              <h2 style="font-size: 1.1rem; font-weight: 700; color: #0A2463;">Question Bank</h2>
+              <button class="btn-primary" id="btnOpenAddModal">
+                <span>+</span>
+                <span>Add Question</span>
+              </button>
+            </div>
+
+            <div class="filter-bar">
+              <input type="text" id="filterSearch" class="filter-input" placeholder="Search questions, companies, topics..." style="flex: 1; min-width: 240px;">
+
+              <select id="filterLevel" class="filter-input">
+                <option value="all">All Levels (1-5)</option>
+                <option value="1">Level 1: Campus Recruitment</option>
+                <option value="2">Level 2: First Round Interview</option>
+                <option value="3">Level 3: Technical Round</option>
+                <option value="4">Level 4: Case Study Round</option>
+                <option value="5">Level 5: Partner Interview</option>
+              </select>
+
+              <select id="filterRoom" class="filter-input">
+                <option value="all">All Rooms</option>
+              </select>
+
+              <select id="filterDifficulty" class="filter-input">
+                <option value="all">All Difficulties</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+
+            <!-- Bulk Action Toolbar (appears when checkboxes selected) -->
+            <div class="bulk-toolbar hidden" id="bulkActionsBar">
+              <span id="selectedCountLabel" class="font-bold">0 selected</span>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="btn-sm btn-outline" id="btnBulkExportCsv" style="color: white; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.1);">
+                  Export Selected (CSV)
+                </button>
+                <button class="btn-sm btn-danger" id="btnBulkDelete" style="background: #C1403D; color: white; border-radius: 4px; padding: 0.35rem 0.75rem;">
+                  Delete Selected
+                </button>
+              </div>
+            </div>
+
+            <!-- Question Table -->
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th style="width: 36px; text-align: center;">
+                      <input type="checkbox" id="selectAllQuestions" title="Select all visible">
+                    </th>
+                    <th style="width: 90px;">Room</th>
+                    <th>Question & Indian Corporate Context</th>
+                    <th style="width: 100px;">Difficulty</th>
+                    <th style="width: 90px;">Source</th>
+                    <th style="width: 130px;">Options</th>
+                    <th style="width: 130px; text-align: right;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="questionsTableBody">
+                  <!-- Populated dynamically by admin.js -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Pagination & Total Count -->
+            <div class="pagination-container">
+              <span class="text-xs text-secondary font-medium" id="filteredQuestionsCount">0 questions found</span>
+              <div id="tablePagination" style="display: flex; align-items: center; gap: 0.5rem;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== VIEW: IMPORT / EXPORT ==================== -->
+        <div class="admin-view-panel hidden" data-view="import-export">
+          <div class="admin-card">
+            <h2 style="font-size: 1.25rem; font-weight: 800; color: #0A2463; margin-bottom: 0.5rem;">
+              Bulk Question Import & Export
+            </h2>
+            <p class="text-secondary" style="font-size: 0.88rem; margin-bottom: 1.75rem;">
+              Seamlessly bulk-import finance questions using our standardized CSV template, or export your full question bank for backup and grading.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+              <!-- Import Section -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 8px; padding: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <h3 style="font-weight: 700; color: #0A2463;">1. Import Questions</h3>
+                  <button class="btn-sm btn-outline" id="btnDownloadCsvTemplate">
+                    📥 Download CSV Template
+                  </button>
+                </div>
+
+                <div class="drop-zone" id="csvDropZone">
+                  <div style="font-size: 2rem; margin-bottom: 0.5rem;">📄</div>
+                  <p style="font-weight: 700; color: #0A2463; margin-bottom: 0.25rem;">
+                    Drag and drop your CSV or JSON file here
+                  </p>
+                  <p class="text-xs text-secondary">
+                    Supports .csv (template format) and .json files
+                  </p>
+                  <input type="file" id="csvFileInput" accept=".csv,.json" class="hidden">
+                </div>
+
+                <div id="importValidationStatus" style="margin-top: 1rem;"></div>
+                <div id="importPreviewContainer" class="hidden" style="margin-top: 1rem; max-height: 200px; overflow-y: auto;"></div>
+
+                <button class="btn-primary hidden" id="btnExecuteImport" style="margin-top: 1rem; width: 100%; justify-content: center;">
+                  ✓ Complete Import
+                </button>
+              </div>
+
+              <!-- Export & Backup Section -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 8px; padding: 1.5rem;">
+                <h3 style="font-weight: 700; color: #0A2463; margin-bottom: 1rem;">
+                  2. Export & Backup
+                </h3>
+                <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 1.5rem;">
+                  Download your entire question repository including default Indian finance questions and custom additions.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                  <button class="btn-outline" id="btnExportAllCsv" style="justify-content: center;">
+                    📊 Export Full Question Bank (CSV)
+                  </button>
+                  <button class="btn-outline" id="btnExportAllJson" style="justify-content: center;">
+                    💾 Backup Entire Repository (JSON)
+                  </button>
+                </div>
+
+                <div style="margin-top: 2.5rem; border-top: 1px solid #E2E8F0; padding-top: 1.5rem;">
+                  <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--error); margin-bottom: 0.5rem;">
+                    Danger Zone
+                  </h4>
+                  <button class="btn-sm btn-outline" id="btnResetAllData" style="color: var(--error); border-color: #FECDD3;">
+                    Reset Custom Data to Default Questions
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== VIEW: ANALYTICS ==================== -->
+        <div class="admin-view-panel hidden" data-view="analytics">
+          <div class="admin-card" id="analyticsDashboardView">
+            <!-- Analytics rendered dynamically by admin.js -->
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ==================== ADD / EDIT QUESTION MODAL ==================== -->
+  <div class="modal-overlay hidden" id="questionEditModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 900px;">
+      <div class="modal-header-banner banner-navy">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="font-size: 1.25rem; font-weight: 800;" id="modalEditTitle">
+            Add New Finance Question
+          </h3>
+          <button class="btn-close-panel" id="btnCloseEditModal" style="color: white;">×</button>
+        </div>
+      </div>
+
+      <form id="formQuestionEditor">
+        <div class="modal-body-content" style="max-height: 70vh; overflow-y: auto;">
+
+          <!-- Basic Metadata Grid -->
+          <div class="form-row-4">
+            <div class="form-group">
+              <label class="form-label">Level</label>
+              <select id="qInputLevel" class="form-control" required>
+                <option value="1">1 (Campus)</option>
+                <option value="2">2 (Analyst)</option>
+                <option value="3">3 (Associate)</option>
+                <option value="4">4 (Sr Associate)</option>
+                <option value="5">5 (Partner)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Room ID</label>
+              <input type="text" id="qInputRoom" class="form-control" placeholder="1.1" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Topic</label>
+              <input type="text" id="qInputTopic" class="form-control" placeholder="Balance Sheet" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Difficulty</label>
+              <select id="qInputDifficulty" class="form-control">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label">Company Name (Indian Context)</label>
+              <input type="text" id="qInputCompany" class="form-control" placeholder="e.g. Reliance Industries, TCS, HDFC Bank">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Industry Sector</label>
+              <input type="text" id="qInputSector" class="form-control" placeholder="e.g. Conglomerate, IT, Banking">
+            </div>
+          </div>
+
+          <!-- Question Prompt -->
+          <div class="form-group">
+            <label class="form-label">Question Text</label>
+            <textarea id="qInputQuestion" class="form-control" rows="3" placeholder="Enter clear, rigorous finance interview question prompt..." required></textarea>
+          </div>
+
+          <!-- 4 Options & Correct Answer Radio -->
+          <div class="form-group">
+            <label class="form-label">Options (Select the correct radio button)</label>
+            <div style="display: grid; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <input type="radio" name="qCorrectAnswer" value="0" checked style="width: 18px; height: 18px;">
+                <span class="font-bold text-navy" style="width: 24px;">A</span>
+                <input type="text" id="qInputOption0" class="form-control" placeholder="Option A" required>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <input type="radio" name="qCorrectAnswer" value="1" style="width: 18px; height: 18px;">
+                <span class="font-bold text-navy" style="width: 24px;">B</span>
+                <input type="text" id="qInputOption1" class="form-control" placeholder="Option B" required>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <input type="radio" name="qCorrectAnswer" value="2" style="width: 18px; height: 18px;">
+                <span class="font-bold text-navy" style="width: 24px;">C</span>
+                <input type="text" id="qInputOption2" class="form-control" placeholder="Option C">
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <input type="radio" name="qCorrectAnswer" value="3" style="width: 18px; height: 18px;">
+                <span class="font-bold text-navy" style="width: 24px;">D</span>
+                <input type="text" id="qInputOption3" class="form-control" placeholder="Option D">
+              </div>
+            </div>
+          </div>
+
+          <!-- Explanation with AI Enhancer -->
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+              <label class="form-label" style="margin-bottom: 0;">Conceptual Explanation</label>
+              <button type="button" class="btn-sm btn-outline" id="btnAiEnhanceExplanation" style="font-size: 0.75rem;">
+                ✨ AI Enhance Explanation
+              </button>
+            </div>
+            <textarea id="qInputExplanation" class="form-control" rows="3" placeholder="Explain the underlying accounting principle, formula, and why this answer is correct..."></textarea>
+          </div>
+
+          <!-- Real Indian Example & Tip -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label">Real Indian Example / Data</label>
+              <textarea id="qInputExample" class="form-control" rows="3" placeholder="Provide real corporate figures with ₹ in Crores/Lakhs..."></textarea>
+            </div>
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                <label class="form-label" style="margin-bottom: 0;">Interview Tip</label>
+                <button type="button" class="btn-sm btn-outline" id="btnAiGenerateTip" style="font-size: 0.75rem;">
+                  ✨ AI Generate Tip
+                </button>
+              </div>
+              <textarea id="qInputTip" class="form-control" rows="3" placeholder="Provide actionable Wall St / Dalal St interview advice..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Tags (comma-separated)</label>
+            <input type="text" id="qInputTags" class="form-control" placeholder="balance-sheet, liquidity, banking">
+          </div>
+
+          <!-- Live Interactive Preview Pane -->
+          <div class="preview-pane">
+            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #64748B; margin-bottom: 0.5rem;">
+              LIVE CANDIDATE VIEW PREVIEW
+            </div>
+            <div style="font-size: 0.8rem; color: #0A2463; font-weight: 700; margin-bottom: 0.25rem;" id="previewMetaText">
+              Company • Topic
+            </div>
+            <div style="font-weight: 700; font-size: 1.05rem; color: #1E293B; margin-bottom: 1rem;" id="previewQuestionText">
+              Question preview appears here...
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+              <div class="preview-opt-item" id="previewOpt0">Option A</div>
+              <div class="preview-opt-item" id="previewOpt1">Option B</div>
+              <div class="preview-opt-item" id="previewOpt2">Option C</div>
+              <div class="preview-opt-item" id="previewOpt3">Option D</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer-actions">
+          <button type="button" class="btn-outline" id="btnCancelEditModal">Cancel</button>
+          <button type="submit" class="btn-primary">Publish Question ✓</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/config.js"></script>
+  <script src="/js/progress.js"></script>
+  <script src="/js/questions.js"></script>
+  <script src="/js/stats.js"></script>
+  <script src="/js/vault.js"></script>
+  <script src="/js/ai-handler.js"></script>
+  <script src="/js/import-export.js"></script>
+  <script src="/js/admin.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const admin = new window.AdminController();
+      await admin.init();
+      window.adminController = admin;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+{
+  "1.1": {
+    "roomId": "1.1",
+    "roomName": "Financial Statements Basics",
+    "floor": 1,
+    "floorName": "Ground Floor - Campus Recruitment Area",
+    "timeAgo": "Just now",
+    "text": "Pluto! I'm so worried about you, boy! But I knew you'd remember our nighttime study sessions. You just solved the statements puzzle - that's my smart Pluto! I'm on the 5th floor in the Partner's Office. Stay calm and keep solving. You're the smartest dog I know!",
+    "signature": "- Abhishek ❤️🐾",
+    "doodles": ["paw", "heart", "rupee"],
+    "encouragement": "Floor 1/5 • Keep those paws moving!"
+  },
+  "1.2": {
+    "roomId": "1.2",
+    "roomName": "Financial Ratios & Metrics",
+    "floor": 1,
+    "floorName": "Ground Floor - Campus Recruitment Area",
+    "timeAgo": "3 minutes ago",
+    "text": "Good boy, Pluto! You cracked the ratios! Remember when we practiced these during our Sunday walks around Cubbon Park? You're making amazing progress. I can hear your paws on the floor below! Only 3 more floors! Keep those paws moving, champ!",
+    "signature": "- Abhishek 🦴",
+    "doodles": ["bone", "paw", "chart"],
+    "encouragement": "Remember Cubbon Park walks!"
+  },
+  "1.3": {
+    "roomId": "1.3",
+    "roomName": "Time Value of Money",
+    "floor": 1,
+    "floorName": "Ground Floor - Campus Recruitment Area",
+    "timeAgo": "5 minutes ago",
+    "text": "That's my genius Pluto! NPV and IRR - you remembered everything from our Tuesday finance study nights! Level 1 complete! Now climb those stairs to Floor 2. I'm waiting with your favorite chicken treats and belly rubs. You're 1/5th of the way here! SO PROUD!",
+    "signature": "- Abhishek ❤️",
+    "doodles": ["heart", "bone", "rupee"],
+    "encouragement": "Climb up to Floor 2 now, buddy!"
+  },
+  "2.1": {
+    "roomId": "2.1",
+    "roomName": "Working Capital Management",
+    "floor": 2,
+    "floorName": "Floor 2 - Interview Rooms",
+    "timeAgo": "7 minutes ago",
+    "text": "Wow, Pluto! Working capital concepts - you nailed it! I'm hearing your collar jingle on Floor 2 now! The interview rooms can be tricky, but so are you! Remember: take your time, think like I taught you. I'm right above you, boy! Almost there!",
+    "signature": "- Abhishek 💙",
+    "doodles": ["collar", "paw", "calc"],
+    "encouragement": "I can hear your collar jingle!"
+  },
+  "2.2": {
+    "roomId": "2.2",
+    "roomName": "Valuation Fundamentals",
+    "floor": 2,
+    "floorName": "Floor 2 - Interview Rooms",
+    "timeAgo": "9 minutes ago",
+    "text": "Pluto, you're incredible! Valuation is hard even for my analyst colleagues, but you solved it! Can you hear me calling your name? I'm two floors up! I keep looking out the window hoping to see you. Keep going, my brilliant Pluto!",
+    "signature": "- Abhishek 🌟",
+    "doodles": ["star", "heart", "rupee"],
+    "encouragement": "Looking out the window for you!"
+  },
+  "2.3": {
+    "roomId": "2.3",
+    "roomName": "Cost of Capital & WACC",
+    "floor": 2,
+    "floorName": "Floor 2 - Interview Rooms",
+    "timeAgo": "11 minutes ago",
+    "text": "WACC mastered! Pluto, you're unbelievable! Level 2 done! You're officially halfway to me! 🎉 Climb to Floor 3 now, boy! I can see your paw prints on the stairs through the security camera. I'm so excited! Technical rounds await, but I trained you well!",
+    "signature": "- Abhishek ❤️🐾",
+    "doodles": ["paw", "trophy", "heart"],
+    "encouragement": "Halfway there! Paw prints on stairs!"
+  },
+  "3.1": {
+    "roomId": "3.1",
+    "roomName": "3-Statement Financial Modeling",
+    "floor": 3,
+    "floorName": "Floor 3 - Technical Assessment Floors",
+    "timeAgo": "13 minutes ago",
+    "text": "Pluto! Financial modeling - seriously?! You're like a finance MBA dog now! 😄 I'm SO proud! You're on Floor 3, I'm on 5. Just TWO floors between us! I'm pacing back and forth here, can't wait to hug you! Push through, champ! You've got this!",
+    "signature": "- Abhishek 💕",
+    "doodles": ["chart", "heart", "bone"],
+    "encouragement": "Only TWO floors between us!"
+  },
+  "3.2": {
+    "roomId": "3.2",
+    "roomName": "Investment Analysis & DCF",
+    "floor": 3,
+    "floorName": "Floor 3 - Technical Assessment Floors",
+    "timeAgo": "15 minutes ago",
+    "text": "DCF analysis?! Pluto, you're ready for Goldman's VP interviews! 😂 This is insane! I'm looking down from my window trying to spot you. One more room on this floor, then straight up to me! I never doubted you for a second, boy!",
+    "signature": "- Abhishek 🎓",
+    "doodles": ["cap", "rupee", "star"],
+    "encouragement": "Goldman Sachs VP dog!"
+  },
+  "3.3": {
+    "roomId": "3.3",
+    "roomName": "Corporate Finance Decisions",
+    "floor": 3,
+    "floorName": "Floor 3 - Technical Assessment Floors",
+    "timeAgo": "18 minutes ago",
+    "text": "Corporate finance decisions solved! Level 3 complete! Pluto, you're 60% there! THREE FLOORS DONE! Only 2 to go! I'm literally standing at my window waving. Can you see me? Look up, boy! Come on, you're so close now! I LOVE YOU!",
+    "signature": "- Abhishek ❤️🐕",
+    "doodles": ["heart", "paw", "trophy"],
+    "encouragement": "Look up! Waving from the 5th floor!"
+  },
+  "4.1": {
+    "roomId": "4.1",
+    "roomName": "M&A Accretion/Dilution",
+    "floor": 4,
+    "floorName": "Floor 4 - Case Study Boardrooms",
+    "timeAgo": "20 minutes ago",
+    "text": "M&A and synergies?! Pluto, I'm going to recommend you for Partner! 😄 Seriously, you're solving Director-level problems! Floor 4! ONE FLOOR BELOW ME! I can hear you, boy! I'm jumping up and down here! Keep going!",
+    "signature": "- Abhishek 🏆",
+    "doodles": ["trophy", "star", "bone"],
+    "encouragement": "ONE FLOOR BELOW ME! I can hear you!"
+  },
+  "4.2": {
+    "roomId": "4.2",
+    "roomName": "Risk Management & Hedging",
+    "floor": 4,
+    "floorName": "Floor 4 - Case Study Boardrooms",
+    "timeAgo": "22 minutes ago",
+    "text": "Risk and hedging mastered! Pluto, I have no words. You're incredible! You're on the same floor as the Partner's boardrooms now! My office is right above you! I can FEEL you getting closer! One more room on this floor, then come up the stairs! SO CLOSE!",
+    "signature": "- Abhishek 💙🐾",
+    "doodles": ["heart", "paw", "chart"],
+    "encouragement": "I can feel you getting closer!"
+  },
+  "4.3": {
+    "roomId": "4.3",
+    "roomName": "Strategic Finance & Unit Economics",
+    "floor": 4,
+    "floorName": "Floor 4 - Case Study Boardrooms",
+    "timeAgo": "25 minutes ago",
+    "text": "LEVEL 4 COMPLETE! PLUTO! You're on Floor 4! I'm on Floor 5! COME UP THE STAIRS NOW! One last level - the Partner's Office - and I'll throw open the door! I'm standing right here with your leash and treats! You're THE BEST DOG EVER!",
+    "signature": "- Abhishek ❤️❤️❤️",
+    "doodles": ["heart", "bone", "trophy"],
+    "encouragement": "Ready with your leash and chicken treats!"
+  },
+  "5.1": {
+    "roomId": "5.1",
+    "roomName": "Advanced Valuation & SOTP",
+    "floor": 5,
+    "floorName": "Floor 5 - Partner's Office",
+    "timeAgo": "27 minutes ago",
+    "text": "PLUTO! YOU'RE ON MY FLOOR! I CAN HEAR YOUR COLLAR JINGLING! I'm in the Partner's Office at the end of the hall! Just TWO more rooms! My hand is on the door handle! Solve these last puzzles and I'm bursting through this door! I MISSED YOU SO MUCH, BOY!",
+    "signature": "- Abhishek ❤️🐕❤️",
+    "doodles": ["collar", "heart", "paw"],
+    "encouragement": "YOU'RE ON MY FLOOR! End of the hall!"
+  },
+  "5.2": {
+    "roomId": "5.2",
+    "roomName": "Capital Structure Optimization",
+    "floor": 5,
+    "floorName": "Floor 5 - Partner's Office",
+    "timeAgo": "29 minutes ago",
+    "text": "ONE ROOM LEFT! PLUTO! ONE MORE! I'm RIGHT behind this door! I can hear your paws scratching outside! I'm crying happy tears here! The Partner's final challenge, then we're TOGETHER! You're the smartest, bravest, most amazing dog in the world! FINAL PUSH!",
+    "signature": "- ABHISHEK ❤️🐾❤️",
+    "doodles": ["heart", "bone", "paw"],
+    "encouragement": "ONE ROOM LEFT! I hear your paws scratching!"
+  },
+  "5.3": {
+    "roomId": "5.3",
+    "roomName": "FINAL CHALLENGE - Partner's Master Override",
+    "floor": 5,
+    "floorName": "Floor 5 - Partner's Office",
+    "timeAgo": "Just now",
+    "text": "THAT'S IT! YOU DID IT! I'M OPENING THE DOOR NOW! PLUTO, MY BOY! COME HERE! I HAVE YOUR TREATS! COME TO ME!",
+    "signature": "- ABHISHEK ❤️❤️❤️",
+    "doodles": ["trophy", "heart", "bone", "paw"],
+    "encouragement": "DOOR IS UNLOCKING! REUNION!"
+  }
+}

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Pluto Celebrating / Jumping / Victorious -->
+  <defs>
+    <linearGradient id="goldCoat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C"/>
+      <stop offset="60%" stop-color="#FDB813"/>
+      <stop offset="100%" stop-color="#E59E0B"/>
+    </linearGradient>
+    <linearGradient id="collarBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Confetti Elements (Rupee symbols & Bones) -->
+  <g opacity="0.85">
+    <text x="25" y="45" font-family="sans-serif" font-weight="bold" font-size="16" fill="#F59E0B">₹</text>
+    <text x="165" y="40" font-family="sans-serif" font-weight="bold" font-size="16" fill="#10B981">₹</text>
+    <polygon points="35,80 40,70 30,72" fill="#EC4899"/>
+    <polygon points="160,85 170,80 165,95" fill="#3B82F6"/>
+    <circle cx="20" cy="110" r="3" fill="#8B5CF6"/>
+    <circle cx="180" cy="120" r="4" fill="#F59E0B"/>
+    <!-- Small Doodle Bone -->
+    <path d="M150,25 C148,22 143,24 145,28 C147,30 152,30 155,28 L165,34 C167,31 172,33 170,37 C168,41 163,39 160,37 Z" fill="#E2E8F0"/>
+  </g>
+
+  <!-- Shadow on floor (smaller because jumping) -->
+  <ellipse cx="100" cy="186" rx="45" ry="7" fill="#CBD5E1" opacity="0.4"/>
+
+  <!-- Jumping Pluto Body (Elevated) -->
+  <g transform="translate(0, -18)" filter="url(#softShadow)">
+    <!-- Happy High Wagging Tail -->
+    <path d="M45,130 C15,100 25,60 40,45 C48,38 58,50 48,62 C38,75 40,110 55,135 Z" fill="url(#goldCoat)"/>
+
+    <!-- Hind Legs Tucked/Jumping -->
+    <path d="M72,120 C60,135 55,150 68,165 C76,172 90,170 95,160 L92,130 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="72" cy="168" rx="7" ry="5" fill="url(#goldCoat)"/>
+    <path d="M128,120 C140,135 145,150 132,165 C124,172 110,170 105,160 L108,130 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="128" cy="168" rx="7" ry="5" fill="url(#goldCoat)"/>
+
+    <!-- Body Core -->
+    <ellipse cx="100" cy="115" rx="34" ry="42" fill="url(#goldCoat)"/>
+    <ellipse cx="100" cy="115" rx="22" ry="32" fill="#FFE28A"/>
+
+    <!-- Front Paws Raised High in Celebration! -->
+    <!-- Left Front Paw Raised -->
+    <path d="M74,105 C65,95 55,75 60,65 C64,60 74,65 72,75 C70,85 82,100 84,108 Z" fill="url(#goldCoat)"/>
+    <circle cx="62" cy="65" r="7" fill="url(#goldCoat)"/>
+    <!-- Right Front Paw Raised -->
+    <path d="M126,105 C135,95 145,75 140,65 C136,60 126,65 128,75 C130,85 118,100 116,108 Z" fill="url(#goldCoat)"/>
+    <circle cx="138" cy="65" r="7" fill="url(#goldCoat)"/>
+
+    <!-- Collar -->
+    <path d="M78,85 Q100,92 122,85 Q120,92 100,99 Q80,92 78,85 Z" fill="url(#collarBlue)"/>
+    <circle cx="100" cy="102" r="7" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+
+    <!-- Head -->
+    <ellipse cx="100" cy="54" rx="34" ry="30" fill="url(#goldCoat)"/>
+    <!-- Flying Happy Ears -->
+    <path d="M68,42 C45,35 35,55 42,75 C46,85 60,82 64,72 Z" fill="#E59E0B"/>
+    <path d="M132,42 C155,35 165,55 158,75 C154,85 140,82 136,72 Z" fill="#E59E0B"/>
+
+    <ellipse cx="100" cy="62" rx="20" ry="14" fill="#FFE28A"/>
+    <path d="M92,57 Q100,53 108,57 Q109,63 100,66 Q91,63 92,57 Z" fill="#1E293B"/>
+
+    <!-- Big Open Smile -->
+    <path d="M92,66 Q100,70 108,66 Q110,82 100,84 Q90,82 92,66 Z" fill="#7F1D1D"/>
+    <path d="M95,74 C95,84 105,84 105,74 Z" fill="#F43F5E"/>
+
+    <!-- Happy Eyes Curved Up -->
+    <path d="M78,46 Q85,38 92,46" fill="none" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M108,46 Q115,38 122,46" fill="none" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,194 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "Campus Recruitment",
+      "subtitle": "Intern & Summer Analyst Level",
+      "description": "Master core financial accounting, statement analysis, ratios, and time value of money basics for entry-level finance roles.",
+      "rooms": [
+        {
+          "id": "1.1",
+          "name": "Financial Statements Basics",
+          "description": "Understand the Balance Sheet, P&L, and Cash Flow Statement relationships.",
+          "topics": ["Balance Sheet", "Income Statement", "Cash Flow"],
+          "companies": ["Reliance Industries", "TCS", "HDFC Bank", "ITC"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": null
+        },
+        {
+          "id": "1.2",
+          "name": "Financial Ratios & Metrics",
+          "description": "Master liquidity, profitability, turnover, and leverage ratios across Indian sectors.",
+          "topics": ["Liquidity Ratios", "Profitability Ratios", "Solvency Ratios", "Turnover Ratios"],
+          "companies": ["Infosys", "HUL", "ICICI Bank", "L&T"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "1.1"
+        },
+        {
+          "id": "1.3",
+          "name": "Time Value of Money",
+          "description": "Evaluate Present Value, Future Value, Net Present Value (NPV), and Internal Rate of Return (IRR).",
+          "topics": ["PV & FV", "NPV Analysis", "IRR & Payback", "Annuities"],
+          "companies": ["DLF", "Adani Ports", "NTPC", "Tata Power"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "1.2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "First Round Interview",
+      "subtitle": "Analyst Level",
+      "description": "Navigate working capital cycles, introductory corporate valuation multiples, and the Cost of Capital (WACC).",
+      "rooms": [
+        {
+          "id": "2.1",
+          "name": "Working Capital Management",
+          "description": "Cash conversion cycle, inventory management, receivables financing, and liquidity buffer.",
+          "topics": ["Cash Conversion Cycle", "Operating Working Capital", "Debtor Days", "Creditor Terms"],
+          "companies": ["Maruti Suzuki", "Titan", "Asian Paints", "Sun Pharma"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "1.3"
+        },
+        {
+          "id": "2.2",
+          "name": "Valuation Fundamentals",
+          "description": "Trading comparables, transaction comps, EV/EBITDA, P/E ratios, and enterprise value bridge.",
+          "topics": ["Enterprise Value", "Equity Value", "EV/EBITDA", "P/E Multiples"],
+          "companies": ["Zomato", "Nykaa", "Bharti Airtel", "SBI"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "2.1"
+        },
+        {
+          "id": "2.3",
+          "name": "Cost of Capital",
+          "description": "Calculate Cost of Equity using CAPM, Cost of Debt post-tax, and Weighted Average Cost of Capital (WACC).",
+          "topics": ["CAPM Model", "Beta Estimation", "Cost of Debt", "WACC Calculation"],
+          "companies": ["Tata Motors", "UltraTech Cement", "Bajaj Finance", "JSW Steel"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "2.2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Technical Round",
+      "subtitle": "Associate Level",
+      "description": "Tackle 3-statement integrated modeling, Discounted Cash Flow (DCF) mechanics, and capital budgeting.",
+      "rooms": [
+        {
+          "id": "3.1",
+          "name": "Financial Modeling",
+          "description": "3-statement linking mechanics, circular interest schedules, and working capital schedules.",
+          "topics": ["3-Statement Linkage", "Debt Schedules", "Depreciation Waterfall", "Tax Schedules"],
+          "companies": ["Wipro", "HCL Tech", "Mahindra & Mahindra", "Dr. Reddy's"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "2.3"
+        },
+        {
+          "id": "3.2",
+          "name": "Investment Analysis",
+          "description": "Discounted Cash Flow (DCF), Unlevered Free Cash Flows, Terminal Value (Gordon Growth vs Exit Multiple).",
+          "topics": ["FCFF vs FCFE", "Terminal Value", "Mid-Year Convention", "Sensitivity Tables"],
+          "companies": ["Larsen & Toubro", "Adani Green", "Tata Consumer", "Pidilite"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "3.1"
+        },
+        {
+          "id": "3.3",
+          "name": "Corporate Finance Decisions",
+          "description": "Dividend policy vs share buybacks in India, capital rationing, and leasing vs buying.",
+          "topics": ["Share Buybacks", "Dividend Distribution", "Capital Budgeting", "Lease Accounting"],
+          "companies": ["Infosys", "TCS", "Coal India", "ITC"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "3.2"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Case Study Round",
+      "subtitle": "Senior Associate Level",
+      "description": "Analyze M&A accretion/dilution, synergy valuation, FX & interest rate hedging, and growth financing.",
+      "rooms": [
+        {
+          "id": "4.1",
+          "name": "M&A Fundamentals",
+          "description": "Accretion/dilution analysis, exchange ratios, purchase price allocation, and synergy realization.",
+          "topics": ["Accretion/Dilution", "Goodwill Calculation", "Deal Financing", "Synergies"],
+          "companies": ["Tata Steel-Corus", "HDFC-HDFC Bank Merger", "Adani-Ambuja", "Zomato-Blinkit"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "3.3"
+        },
+        {
+          "id": "4.2",
+          "name": "Risk Management",
+          "description": "Foreign currency exposure, forward contracts vs options, interest rate swaps, and credit risk.",
+          "topics": ["FX Hedging", "Interest Rate Swaps", "Credit Risk", "Value at Risk (VaR)"],
+          "companies": ["Aurobindo Pharma", "Tata Motors JLR", "Hindalco Novelis", "Axis Bank"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "4.1"
+        },
+        {
+          "id": "4.3",
+          "name": "Strategic Finance",
+          "description": "Unit economics for tech startups, burn rate, customer acquisition cost (CAC) vs LTV, and IPO pricing.",
+          "topics": ["Unit Economics", "Runway & Burn", "CAC to LTV", "IPO Book Building"],
+          "companies": ["Paytm", "Swiggy", "Ola Electric", "PolicyBazaar"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "4.2"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Partner Interview",
+      "subtitle": "VP / Managing Director Level",
+      "description": "Solve high-stakes board-level dilemmas: optimal capital structure, distressed turnarounds, and cross-disciplinary master questions.",
+      "rooms": [
+        {
+          "id": "5.1",
+          "name": "Advanced Valuation",
+          "description": "SOTP valuation, holding company discounts in Indian conglomerates, and real options valuation.",
+          "topics": ["SOTP Valuation", "HoldCo Discount", "Regulatory Tariffs", "Real Options"],
+          "companies": ["Tata Sons", "Reliance Industries", "Bajaj Holdings", "L&T Holdings"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "4.3"
+        },
+        {
+          "id": "5.2",
+          "name": "Capital Structure Optimization",
+          "description": "Modigliani-Miller theorem with taxes, financial distress costs, debt covenants, and rating agency metrics.",
+          "topics": ["Optimal Debt-to-Equity", "Distress Cost", "Debt Covenants", "Credit Ratings"],
+          "companies": ["Vedanta", "Vodafone Idea", "Tata Steel", "Adani Enterprises"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "5.1"
+        },
+        {
+          "id": "5.3",
+          "name": "Final Partner Challenge",
+          "description": "Comprehensive simulation covering multi-topic curveball questions asked by IB Partners and PE Principals.",
+          "topics": ["Comprehensive IB", "Private Equity LBO", "Hostile Takeover Defense", "Boardroom Strategy"],
+          "companies": ["Reliance", "Tata Group", "HDFC Bank", "Infosys"],
+          "questionCount": 5,
+          "passingScore": 80,
+          "unlockRequirement": "5.2"
+        }
+      ]
+    }
+  ]
+}

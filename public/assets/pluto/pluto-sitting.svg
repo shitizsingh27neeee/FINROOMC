@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Pluto the Golden Labrador (Sitting) -->
+  <defs>
+    <linearGradient id="goldCoat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C"/>
+      <stop offset="60%" stop-color="#FDB813"/>
+      <stop offset="100%" stop-color="#E59E0B"/>
+    </linearGradient>
+    <linearGradient id="earShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E59E0B"/>
+      <stop offset="100%" stop-color="#C67D05"/>
+    </linearGradient>
+    <linearGradient id="collarBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="100" cy="182" rx="60" ry="10" fill="#CBD5E1" opacity="0.6"/>
+
+  <!-- Tail (animated in CSS) -->
+  <g class="pluto-tail" id="plutoTail">
+    <path d="M55,145 C35,135 20,115 28,95 C33,85 45,95 38,110 C32,122 45,138 60,150 Z" fill="url(#goldCoat)"/>
+  </g>
+
+  <!-- Hind Legs & Body -->
+  <g id="plutoBody" filter="url(#softShadow)">
+    <!-- Back / Flank -->
+    <path d="M70,110 C60,125 55,145 65,168 C75,178 95,178 100,172 C105,178 125,178 135,168 C145,145 140,125 130,110 Z" fill="url(#goldCoat)"/>
+    <!-- Chest -->
+    <path d="M78,95 C75,115 80,140 100,155 C120,140 125,115 122,95 Z" fill="#FFE28A"/>
+    <!-- Front Paws -->
+    <!-- Left Paw -->
+    <path d="M80,140 L82,175 C82,179 75,182 70,180 C65,178 68,172 70,145 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="73" cy="178" rx="8" ry="5" fill="url(#goldCoat)"/>
+    <!-- Right Paw -->
+    <path d="M120,140 L118,175 C118,179 125,182 130,180 C135,178 132,172 130,145 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="127" cy="178" rx="8" ry="5" fill="url(#goldCoat)"/>
+    <!-- Paw toes details -->
+    <line x1="71" y1="176" x2="71" y2="182" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="75" y1="176" x2="75" y2="182" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="125" y1="176" x2="125" y2="182" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="129" y1="176" x2="129" y2="182" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Blue Collar & Tag -->
+  <g id="plutoCollar">
+    <path d="M78,96 Q100,105 122,96 Q120,103 100,111 Q80,103 78,96 Z" fill="url(#collarBlue)"/>
+    <!-- Collar Ring -->
+    <circle cx="100" cy="108" r="3" fill="#94A3B8"/>
+    <!-- Silver Tag (Engraved PLUTO) -->
+    <circle cx="100" cy="116" r="8" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+    <polygon points="100,112 102,116 106,116 103,118 104,122 100,120 96,122 97,118 94,116 98,116" fill="#F59E0B" transform="scale(0.7) translate(43, 49)"/>
+  </g>
+
+  <!-- Head Group -->
+  <g id="plutoHead" filter="url(#softShadow)">
+    <!-- Base Head Shape -->
+    <ellipse cx="100" cy="65" rx="36" ry="32" fill="url(#goldCoat)"/>
+
+    <!-- Floppy Labrador Ears -->
+    <!-- Left Ear -->
+    <path d="M68,52 C52,55 42,75 48,95 C52,105 65,102 68,90 C70,80 72,65 72,55 Z" fill="url(#earShadow)"/>
+    <!-- Right Ear -->
+    <path d="M132,52 C148,55 158,75 152,95 C148,105 135,102 132,90 C130,80 128,65 128,55 Z" fill="url(#earShadow)"/>
+
+    <!-- Snout & Cheeks -->
+    <ellipse cx="100" cy="74" rx="22" ry="16" fill="#FFE28A"/>
+
+    <!-- Cute Labrador Nose -->
+    <path d="M92,68 Q100,64 108,68 Q109,75 100,78 Q91,75 92,68 Z" fill="#1E293B"/>
+    <!-- Nose Highlight -->
+    <ellipse cx="97" cy="68" rx="3" ry="1.5" fill="#64748B"/>
+
+    <!-- Mouth -->
+    <path d="M94,78 Q100,82 106,78" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+    <line x1="100" y1="75" x2="100" y2="80" stroke="#1E293B" stroke-width="2"/>
+
+    <!-- Big Expressive Brown Eyes -->
+    <!-- Left Eye -->
+    <ellipse cx="85" cy="56" rx="6" ry="7" fill="#1E293B"/>
+    <ellipse cx="85" cy="56" rx="4.5" ry="5.5" fill="#78350F"/>
+    <circle cx="83" cy="54" r="2" fill="#FFFFFF"/>
+    <circle cx="87" cy="58" r="0.8" fill="#FFFFFF"/>
+    <!-- Left Eyebrow (Friendly) -->
+    <path d="M79,47 Q86,44 91,48" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Right Eye -->
+    <ellipse cx="115" cy="56" rx="6" ry="7" fill="#1E293B"/>
+    <ellipse cx="115" cy="56" rx="4.5" ry="5.5" fill="#78350F"/>
+    <circle cx="113" cy="54" r="2" fill="#FFFFFF"/>
+    <circle cx="117" cy="58" r="0.8" fill="#FFFFFF"/>
+    <!-- Right Eyebrow -->
+    <path d="M109,48 Q114,44 121,47" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

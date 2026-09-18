@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <!-- Abhishek Standing at Goldman Sachs Bangalore -->
+  <defs>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8B888"/>
+      <stop offset="100%" stop-color="#D49E6A"/>
+    </linearGradient>
+    <linearGradient id="navyShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0A2463"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="100" cy="230" rx="45" ry="6" fill="#CBD5E1" opacity="0.6"/>
+
+  <!-- Leather Shoes -->
+  <ellipse cx="88" cy="226" rx="12" ry="5" fill="#3B2F2F"/>
+  <ellipse cx="112" cy="226" rx="12" ry="5" fill="#3B2F2F"/>
+
+  <!-- Khaki Trousers -->
+  <path d="M78,135 L82,224 L94,224 L98,160 L102,160 L106,224 L118,224 L122,135 Z" fill="#C2A684"/>
+
+  <!-- Brown Belt with Silver Buckle -->
+  <rect x="78" y="132" width="44" height="6" rx="1" fill="#451A03"/>
+  <rect x="96" y="131" width="8" height="8" rx="1" fill="#E2E8F0" stroke="#64748B" stroke-width="1"/>
+
+  <!-- Navy Collared Shirt -->
+  <path d="M74,70 C64,90 62,120 70,135 C80,138 120,138 130,135 C138,120 136,90 126,70 Z" fill="url(#navyShirt)"/>
+  <!-- White Collar -->
+  <polygon points="100,82 86,68 96,66 100,74 104,66 114,68" fill="#FFFFFF"/>
+
+  <!-- Left Arm (Holding Dog Leash) -->
+  <path d="M74,75 C60,95 56,120 62,135" fill="none" stroke="url(#navyShirt)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="62" cy="138" r="6" fill="url(#skinTone)"/>
+  <!-- Red Leash Coiled -->
+  <path d="M62,140 C55,150 50,165 54,175 C58,185 70,180 66,165" fill="none" stroke="#EF4444" stroke-width="3"/>
+
+  <!-- Right Arm (Welcoming Open Hand) -->
+  <path d="M126,75 C140,95 145,115 142,130" fill="none" stroke="url(#navyShirt)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="142" cy="134" r="6" fill="url(#skinTone)"/>
+
+  <!-- Neck -->
+  <rect x="92" y="55" width="16" height="15" fill="url(#skinTone)"/>
+
+  <!-- Head -->
+  <ellipse cx="100" cy="40" rx="18" ry="20" fill="url(#skinTone)"/>
+  <!-- Black Short Hair -->
+  <path d="M82,35 C80,20 92,10 100,10 C108,10 120,20 118,35 C116,25 110,18 100,18 C90,18 84,25 82,35 Z" fill="#1E293B"/>
+
+  <!-- Modern Glasses -->
+  <rect x="88" y="34" width="10" height="8" rx="2" fill="none" stroke="#0F172A" stroke-width="1.5"/>
+  <rect x="102" y="34" width="10" height="8" rx="2" fill="none" stroke="#0F172A" stroke-width="1.5"/>
+  <line x1="98" y1="38" x2="102" y2="38" stroke="#0F172A" stroke-width="1.5"/>
+  <ellipse cx="93" cy="38" rx="2" ry="2.5" fill="#1E293B"/>
+  <ellipse cx="107" cy="38" rx="2" ry="2.5" fill="#1E293B"/>
+
+  <!-- Smile -->
+  <path d="M94,48 Q100,53 106,48" fill="none" stroke="#9A3412" stroke-width="2" stroke-linecap="round"/>
+</svg>

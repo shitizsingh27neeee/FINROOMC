@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="100%" height="100%">
+  <!-- Emotional Reunion: Abhishek hugging Pluto on Floor 5 -->
+  <defs>
+    <linearGradient id="goldCoat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C"/>
+      <stop offset="60%" stop-color="#FDB813"/>
+      <stop offset="100%" stop-color="#E59E0B"/>
+    </linearGradient>
+    <linearGradient id="navyShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0A2463"/>
+    </linearGradient>
+    <linearGradient id="skyGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Warm Glow Background -->
+  <rect x="0" y="0" width="300" height="240" rx="16" fill="url(#skyGold)"/>
+  <circle cx="150" cy="120" r="100" fill="#FDE68A" opacity="0.3"/>
+
+  <!-- Confetti Hearts & Sparkles -->
+  <g>
+    <!-- Heart 1 -->
+    <path d="M70,50 C70,44 64,40 60,44 C56,48 70,60 70,60 C70,60 84,48 80,44 C76,40 70,44 70,50 Z" fill="#EF4444"/>
+    <!-- Heart 2 -->
+    <path d="M150,30 C150,22 142,18 137,23 C132,28 150,44 150,44 C150,44 168,28 163,23 C158,18 150,22 150,30 Z" fill="#F43F5E"/>
+    <!-- Heart 3 -->
+    <path d="M230,55 C230,49 224,45 220,49 C216,53 230,65 230,65 C230,65 244,53 240,49 C236,45 230,49 230,55 Z" fill="#EF4444"/>
+    <!-- Sparkles -->
+    <polygon points="110,35 112,40 117,42 112,44 110,49 108,44 103,42 108,40" fill="#F59E0B"/>
+    <polygon points="195,40 197,45 202,47 197,49 195,54 193,49 188,47 193,45" fill="#F59E0B"/>
+  </g>
+
+  <!-- Floor line & shadow -->
+  <ellipse cx="150" cy="220" rx="110" ry="14" fill="#CBD5E1" opacity="0.6"/>
+
+  <!-- Treat Box / Bowl on floor -->
+  <g transform="translate(220, 185)">
+    <rect x="0" y="8" width="34" height="20" rx="4" fill="#E11D48"/>
+    <text x="17" y="22" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle">TREATS</text>
+    <!-- Bone popping out -->
+    <path d="M12,6 C10,3 5,5 7,8 L24,8 C26,5 21,3 19,6 Z" fill="#F8FAFC"/>
+  </g>
+
+  <!-- Abhishek Kneeling Down (Facing Left towards Pluto) -->
+  <g id="abhishekHugging">
+    <!-- Khaki Pants / Kneeling Legs -->
+    <path d="M165,160 C185,165 210,185 215,215 L160,215 C150,195 155,175 165,160 Z" fill="#C2A684"/>
+    <!-- Torso Leaning Forward in Navy Shirt -->
+    <path d="M150,105 C175,108 190,130 185,170 C165,172 145,165 140,140 Z" fill="url(#navyShirt)"/>
+    <!-- Head Leaning Down with Tears of Joy & Big Smile -->
+    <ellipse cx="152" cy="85" rx="20" ry="24" fill="#E8B888"/>
+    <!-- Black Hair -->
+    <path d="M135,78 C135,62 148,58 165,60 C175,62 178,72 176,82 C170,72 165,66 150,66 C140,66 136,74 135,78 Z" fill="#1E293B"/>
+    <!-- Glasses -->
+    <rect x="138" y="78" width="12" height="10" rx="2" fill="none" stroke="#0F172A" stroke-width="1.5"/>
+    <ellipse cx="144" cy="83" rx="2.5" ry="3" fill="#1E293B"/>
+    <!-- Happy Closed Eye with Tear of Joy -->
+    <path d="M140,82 Q144,78 148,82" fill="none" stroke="#1E293B" stroke-width="2"/>
+    <circle cx="136" cy="88" r="1.5" fill="#60A5FA"/> <!-- Happy tear -->
+    <!-- Smiling Mouth -->
+    <path d="M142,97 Q150,103 158,96" fill="none" stroke="#9A3412" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Arms Wrapped Around Pluto -->
+    <path d="M165,120 C140,125 110,128 95,145 C90,152 105,158 115,152 C130,142 155,140 170,135 Z" fill="url(#navyShirt)"/>
+    <circle cx="95" cy="148" r="8" fill="#E8B888"/>
+  </g>
+
+  <!-- Pluto Jumping Into Abhishek's Arms (Facing Right) -->
+  <g id="plutoEmbracing">
+    <!-- Wagging Tail at Maximum Speed -->
+    <path d="M40,165 C15,145 20,115 35,100 C42,95 50,105 44,115 C38,125 45,150 55,170 Z" fill="url(#goldCoat)"/>
+    <!-- Motion Lines on Tail -->
+    <path d="M22,110 Q14,120 20,130" stroke="#F59E0B" stroke-width="2" fill="none"/>
+    <path d="M14,125 Q6,135 12,145" stroke="#F59E0B" stroke-width="2" fill="none"/>
+
+    <!-- Hind Legs Up in Spring -->
+    <path d="M60,170 C50,185 55,205 68,212 C75,215 85,210 82,195 L75,170 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="70" cy="212" rx="7" ry="4" fill="url(#goldCoat)"/>
+
+    <!-- Body Leaning into Abhishek's Chest -->
+    <path d="M65,145 C75,120 100,115 120,125 C125,145 115,175 85,180 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="95" cy="140" rx="15" ry="20" fill="#FFE28A"/>
+
+    <!-- Front Paws Resting on Abhishek's Shoulders -->
+    <path d="M105,130 L135,115 C138,112 142,118 138,122 L112,140 Z" fill="url(#goldCoat)"/>
+    <circle cx="136" cy="116" r="6" fill="url(#goldCoat)"/>
+
+    <!-- Collar & Tag -->
+    <path d="M102,112 L115,116 L113,123 L100,118 Z" fill="#2563EB"/>
+    <circle cx="114" cy="125" r="5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+
+    <!-- Pluto Head Licking Abhishek's Cheek -->
+    <ellipse cx="112" cy="98" rx="20" ry="18" fill="url(#goldCoat)"/>
+    <path d="M96,90 C85,95 80,112 85,125 C90,130 98,125 98,115 Z" fill="#E59E0B"/> <!-- Ear -->
+    <ellipse cx="118" cy="102" rx="12" ry="9" fill="#FFE28A"/>
+    <path d="M124,98 Q129,95 132,98 Q131,103 126,104 Z" fill="#1E293B"/> <!-- Nose -->
+    <!-- Joyful Closed Eye -->
+    <path d="M105,94 Q110,88 115,94" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Tongue Licking Abhishek's Chin! -->
+    <path d="M125,103 Q138,100 134,106 Q130,110 123,106 Z" fill="#F43F5E"/>
+  </g>
+
+  <!-- Banner Bottom -->
+  <rect x="30" y="210" width="240" height="24" rx="12" fill="#1E293B" opacity="0.9"/>
+  <text x="150" y="226" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FDE047" text-anchor="middle">❤️ REUNITED! ABHISHEK &amp; PLUTO FOREVER! 🐾</text>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "idle": [
+    "Woof! Abhishek is waiting on Floor 5 with treats!",
+    "I remember this from our Tuesday study sessions!",
+    "Sniff sniff... I can smell Abhishek's coffee upstairs!",
+    "Let's crack this puzzle and climb another floor! 🐾",
+    "Abhishek always said: check the formula first!",
+    "My tail wags every time we solve a puzzle! 🐕"
+  ],
+  "thinking": [
+    "Hmm... let me tilt my head and think...",
+    "What did Abhishek say about this during our morning walk?",
+    "Paws on the keyboard... let's calculate this!",
+    "Ratios or cash flows? Abhishek explained this with biscuits!",
+    "Concentrating hard! Woof!"
+  ],
+  "correct": [
+    "WOOF! That's correct! Abhishek would be so proud!",
+    "Tail wagging at maximum speed! +Points for treats!",
+    "Yes! One step closer to the Partner's Office!",
+    "We nailed it! Abhishek's finance training never fails!",
+    "Paw-five! That was textbook finance!"
+  ],
+  "wrong": [
+    "Whimper... not quite, but Abhishek taught me to learn from mistakes!",
+    "It's okay! We saved this to the Review Vault to master!",
+    "Let me read Abhishek's explanation carefully...",
+    "No giving up! Abhishek is waiting for me on the 5th floor!",
+    "Let's shake it off and try again! Woof!"
+  ],
+  "hint": [
+    "Sniffing out a helpful hint from Abhishek's notes!",
+    "Aha! A clue to unlock this security puzzle!",
+    "Abhishek's study tip coming in handy!"
+  ],
+  "streak": [
+    "5 IN A ROW! I'm on fire! Abhishek, look at your boy! 🔥",
+    "SUPER STREAK! My tail won't stop wagging! 🐾🔥",
+    "Finance wizard dog mode activated!"
+  ],
+  "levelUp": [
+    "FLOOR CLEARED! Taking the stairs to the next floor! 🏃‍♂️🐾",
+    "I can hear Abhishek's voice getting closer!",
+    "Stairs climbed! New floor, new puzzles, closer to home!"
+  ],
+  "reunion": [
+    "ABHISHEK!! I FOUND YOU!! WOOF WOOF WOOF! ❤️🐕",
+    "BELLY RUBS! CHICKEN TREATS! WE'RE REUNITED!",
+    "BEST DAY EVER! I'M NEVER LEAVING YOUR SIDE!"
+  ]
+}

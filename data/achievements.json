@@ -1,0 +1,90 @@
+[
+  {
+    "id": "first_correct",
+    "title": "First Step on Dalal Street",
+    "description": "Answer your first question correctly.",
+    "icon": "🎯",
+    "points": 50,
+    "category": "milestone"
+  },
+  {
+    "id": "streak_3",
+    "title": "Analyst in the Zone",
+    "description": "Achieve an uninterrupted streak of 3 correct answers.",
+    "icon": "⚡",
+    "points": 100,
+    "category": "streak"
+  },
+  {
+    "id": "streak_5",
+    "title": "High Conviction Call",
+    "description": "Achieve an uninterrupted streak of 5 correct answers.",
+    "icon": "🔥",
+    "points": 250,
+    "category": "streak"
+  },
+  {
+    "id": "streak_10",
+    "title": "Managing Director Mode",
+    "description": "Achieve a flawless 10-answer winning streak.",
+    "icon": "👑",
+    "points": 500,
+    "category": "streak"
+  },
+  {
+    "id": "room_1_1_complete",
+    "title": "Statement Whisperer",
+    "description": "Escape Room 1.1: Financial Statements Basics with ≥80% accuracy.",
+    "icon": "📑",
+    "points": 200,
+    "category": "room"
+  },
+  {
+    "id": "level_1_complete",
+    "title": "Day 1 Day 0 Offer Secured",
+    "description": "Complete all 3 rooms of Level 1: Campus Recruitment.",
+    "icon": "🎓",
+    "points": 500,
+    "category": "level"
+  },
+  {
+    "id": "vault_master",
+    "title": "Due Diligence Champion",
+    "description": "Review and master 3 previously failed questions from your Review Vault.",
+    "icon": "📚",
+    "points": 300,
+    "category": "learning"
+  },
+  {
+    "id": "no_hints",
+    "title": "Independent Valuer",
+    "description": "Clear an entire room without requesting any hints.",
+    "icon": "💡",
+    "points": 250,
+    "category": "skill"
+  },
+  {
+    "id": "speed_demon",
+    "title": "Flash Trading",
+    "description": "Answer a challenging question correctly in under 15 seconds.",
+    "icon": "⏱️",
+    "points": 150,
+    "category": "skill"
+  },
+  {
+    "id": "score_1000",
+    "title": "Crorepati Portfolio",
+    "description": "Accumulate 1,000 career points in the escape room.",
+    "icon": "💰",
+    "points": 200,
+    "category": "milestone"
+  },
+  {
+    "id": "score_5000",
+    "title": "Corner Office Key",
+    "description": "Accumulate 5,000 career points and reach Partner tier.",
+    "icon": "🏆",
+    "points": 1000,
+    "category": "milestone"
+  }
+]

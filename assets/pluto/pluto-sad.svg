@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Pluto Sad / Sympathetic (Gentle, Not Overly Sad) -->
+  <defs>
+    <linearGradient id="goldCoat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C"/>
+      <stop offset="60%" stop-color="#FDB813"/>
+      <stop offset="100%" stop-color="#E59E0B"/>
+    </linearGradient>
+    <linearGradient id="earShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E59E0B"/>
+      <stop offset="100%" stop-color="#C67D05"/>
+    </linearGradient>
+    <linearGradient id="collarBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="100" cy="182" rx="60" ry="10" fill="#CBD5E1" opacity="0.6"/>
+
+  <!-- Drooped Tail -->
+  <path d="M60,150 C55,160 45,175 35,178 C30,178 35,170 42,165 C48,160 55,148 62,142 Z" fill="url(#goldCoat)"/>
+
+  <!-- Body -->
+  <g filter="url(#softShadow)">
+    <path d="M70,115 C60,130 55,145 65,168 C75,178 95,178 100,172 C105,178 125,178 135,168 C145,145 140,130 130,115 Z" fill="url(#goldCoat)"/>
+    <path d="M78,100 C75,120 80,140 100,155 C120,140 125,120 122,100 Z" fill="#FFE28A"/>
+    <path d="M80,140 L82,175 C82,179 75,182 70,180 C65,178 68,172 70,145 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="73" cy="178" rx="8" ry="5" fill="url(#goldCoat)"/>
+    <path d="M120,140 L118,175 C118,179 125,182 130,180 C135,178 132,172 130,145 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="127" cy="178" rx="8" ry="5" fill="url(#goldCoat)"/>
+  </g>
+
+  <!-- Collar -->
+  <g id="plutoCollar">
+    <path d="M78,102 Q100,111 122,102 Q120,109 100,117 Q80,109 78,102 Z" fill="url(#collarBlue)"/>
+    <circle cx="100" cy="120" r="7" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  </g>
+
+  <!-- Head Slightly Lowered -->
+  <g filter="url(#softShadow)" transform="translate(0, 8)">
+    <ellipse cx="100" cy="65" rx="36" ry="32" fill="url(#goldCoat)"/>
+    <!-- Slightly Drooped Ears -->
+    <path d="M68,56 C48,65 40,88 44,108 C46,116 58,114 62,102 C66,90 70,72 72,60 Z" fill="url(#earShadow)"/>
+    <path d="M132,56 C152,65 160,88 156,108 C154,116 142,114 138,102 C134,90 130,72 128,60 Z" fill="url(#earShadow)"/>
+
+    <ellipse cx="100" cy="74" rx="22" ry="16" fill="#FFE28A"/>
+    <path d="M92,69 Q100,65 108,69 Q109,76 100,79 Q91,76 92,69 Z" fill="#1E293B"/>
+
+    <!-- Small gentle frown mouth -->
+    <path d="M94,83 Q100,79 106,83" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Big Hopeful/Puppy Eyes -->
+    <ellipse cx="85" cy="58" rx="6.5" ry="7.5" fill="#1E293B"/>
+    <ellipse cx="85" cy="58" rx="5" ry="6" fill="#78350F"/>
+    <circle cx="83" cy="55" r="2.5" fill="#FFFFFF"/>
+    <!-- Sympathetic Eyebrows -->
+    <path d="M78,48 Q86,51 92,47" fill="none" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+
+    <ellipse cx="115" cy="58" rx="6.5" ry="7.5" fill="#1E293B"/>
+    <ellipse cx="115" cy="58" rx="5" ry="6" fill="#78350F"/>
+    <circle cx="113" cy="55" r="2.5" fill="#FFFFFF"/>
+    <path d="M108,47 Q114,51 122,48" fill="none" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

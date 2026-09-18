@@ -1,0 +1,1440 @@
+[
+  {
+    "id": "q_1_1_1",
+    "level": 1,
+    "room": "1.1",
+    "roomName": "Financial Statements Basics",
+    "topic": "Balance Sheet",
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "company": "Reliance Industries",
+    "sector": "Conglomerate / Energy & Retail",
+    "question": "Which financial statement shows a company's financial position at a specific point in time?",
+    "options": [
+      "Income Statement",
+      "Balance Sheet",
+      "Cash Flow Statement",
+      "Statement of Retained Earnings"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Balance Sheet provides a snapshot of a company's assets, liabilities, and equity at a specific date. Unlike the Income Statement which shows performance over a period, the Balance Sheet is a point-in-time statement.\n\nFundamental Equation: Assets = Liabilities + Equity",
+    "example": "Reliance Industries' Balance Sheet as of March 31, 2024:\n• Total Assets: ₹17,25,000 Crores\n• Total Liabilities: ₹9,75,000 Crores\n• Shareholders' Equity: ₹7,50,000 Crores\n\nThis shows Reliance's financial position on that specific date, rather than aggregated activity across the year.",
+    "interviewTip": "Common Follow-up: 'What is the core conceptual difference between a Balance Sheet and an Income Statement?'\n\nAnswer Framework:\n'The Balance Sheet is a photograph (point in time) showing cumulative owned vs owed resources. The Income Statement is a video (period of time) measuring economic inflows vs outflows. Think: Balance Sheet = snapshot, Income Statement = movie.'\n\nKey points to emphasize:\n1. Point in time vs. Period of time\n2. Real vs. Nominal accounts\n3. Tie them together through Retained Earnings on the Balance Sheet.",
+    "tags": [
+      "balance-sheet",
+      "financial-statements",
+      "fundamental",
+      "accounting"
+    ],
+    "relatedConcepts": [
+      "Assets",
+      "Liabilities",
+      "Equity",
+      "Accounting Equation"
+    ],
+    "hints": [
+      "Think about which statement behaves like a 'still photograph' rather than a video reel.",
+      "The correct statement demonstrates Assets, Liabilities, and Equity in equilibrium.",
+      "It is NOT the statement that records operational revenues or cost of goods sold over a fiscal quarter."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:00:00Z",
+      "updatedAt": "2024-01-15T10:00:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_1_2",
+    "level": 1,
+    "room": "1.1",
+    "roomName": "Financial Statements Basics",
+    "topic": "Liquidity Ratios",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "HDFC Bank",
+    "sector": "Banking & Financial Services",
+    "question": "A corporate client evaluated by HDFC Bank has Current Assets of ₹100 Crores and Current Liabilities of ₹40 Crores. What is the company's Current Ratio?",
+    "options": [
+      "0.40",
+      "1.50",
+      "2.50",
+      "4.00"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Current Ratio measures short-term liquidity and solvency: \n\nCurrent Ratio = Current Assets / Current Liabilities\n= ₹100 Crores / ₹40 Crores = 2.50x\n\nA ratio of 2.50 means the company holds ₹2.50 in liquid/short-term assets for every ₹1.00 of liabilities maturing within 12 months.",
+    "example": "Indian Commercial Banking Benchmark:\n• Standard Manufacturing: Target 1.33x to 1.50x (Tandon Committee norms adopted by SBI & HDFC).\n• Highly liquid FMCG/IT: Often operates at 2.00x+ due to large liquid treasury surpluses.\n• Selecting 0.40 is the inverse calculation (CL / CA), which would imply severe insolvency risk.",
+    "interviewTip": "Interviewers frequently test your analytical reflexes: 'Is a Current Ratio of 5.0x always desirable?'\n\nStrategic Answer:\n'Not necessarily. While high liquidity protects against default, an excessively high ratio (e.g. >3.5x) signals inefficient working capital management—such as lazy cash idle in low-yield bank accounts, slow inventory turnover, or loose customer credit policies that tie up capital.'",
+    "tags": [
+      "current-ratio",
+      "liquidity",
+      "working-capital",
+      "banking"
+    ],
+    "relatedConcepts": [
+      "Quick Ratio",
+      "Cash Ratio",
+      "Working Capital Cycle"
+    ],
+    "hints": [
+      "Formula is Current Assets divided by Current Liabilities (CA / CL).",
+      "Do not invert the equation (do not divide liabilities by assets).",
+      "Divide 100 by 40."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:05:00Z",
+      "updatedAt": "2024-01-15T10:05:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_1_3",
+    "level": 1,
+    "room": "1.1",
+    "roomName": "Financial Statements Basics",
+    "topic": "Profitability Ratios",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "TCS (Tata Consultancy Services)",
+    "sector": "Information Technology",
+    "question": "For FY24, TCS reports Revenue of ₹2,25,000 Cr, Operating Cash Expenses of ₹1,50,000 Cr, Depreciation & Amortization of ₹10,000 Cr, Finance Costs (Interest) of ₹500 Cr, and Income Tax of ₹16,000 Cr. What is TCS's EBITDA?",
+    "options": [
+      "₹48,500 Crores",
+      "₹65,000 Crores",
+      "₹75,000 Crores",
+      "₹85,000 Crores"
+    ],
+    "correctAnswer": 2,
+    "explanation": "EBITDA stands for Earnings Before Interest, Taxes, Depreciation, and Amortization.\n\nEBITDA = Revenue - Operating Cash Expenses (excluding D&A)\nEBITDA = ₹2,25,000 Cr - ₹1,50,000 Cr = ₹75,000 Crores.\n\nDepreciation (₹10,000 Cr), Interest (₹500 Cr), and Tax (₹16,000 Cr) are deducted AFTER EBITDA to arrive at EBIT, EBT, and PAT respectively.",
+    "example": "TCS Operational Performance:\n• EBITDA: ₹75,000 Crores (EBITDA Margin = 75,000 / 2,25,000 = 33.3%)\n• EBIT (Operating Profit): ₹75,000 - ₹10,000 = ₹65,000 Crores\n• EBT: ₹65,000 - ₹500 = ₹64,500 Crores\n• Net Profit (PAT): ₹64,500 - ₹16,000 = ₹48,500 Crores\nNotice that ₹48,500 Cr is PAT, and ₹65,000 Cr is EBIT.",
+    "interviewTip": "IB / PE Interview Drill: 'Why do private equity sponsors and M&A bankers prefer EBITDA over Net Profit (PAT)?'\n\nAnswer Framework:\n'1. Capital Structure Neutral: EBITDA excludes interest, allowing apples-to-apples comparison between debt-heavy and debt-free firms.\n2. Tax Jurisdiction Neutral: Ignores varied state/country tax incentives.\n3. Accounting Policy Neutral: Strips out non-cash depreciation choices (straight-line vs WDV).'",
+    "tags": [
+      "ebitda",
+      "profitability",
+      "income-statement",
+      "it-services"
+    ],
+    "relatedConcepts": [
+      "EBIT",
+      "PAT",
+      "Operating Margin",
+      "Non-Cash Charges"
+    ],
+    "hints": [
+      "EBITDA does not deduct Depreciation, Interest, or Taxes.",
+      "Calculate Operating Revenue minus Operating Cash Expenses directly.",
+      "Subtract 1,50,000 Crores from 2,25,000 Crores."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:10:00Z",
+      "updatedAt": "2024-01-15T10:10:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_1_4",
+    "level": 1,
+    "room": "1.1",
+    "roomName": "Financial Statements Basics",
+    "topic": "Income Statement",
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "company": "ITC Limited",
+    "sector": "FMCG & Conglomerate",
+    "question": "Which of the following line items is reported on ITC Limited's Profit & Loss (Income Statement), rather than its Balance Sheet?",
+    "options": [
+      "Finished Goods Inventory",
+      "Gross Revenue from Operations",
+      "Cash & Cash Equivalents",
+      "Shareholder Equity Capital"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Revenue from Operations represents the top-line inflow earned over the fiscal period from selling goods and services (e.g. ITC's cigarette, packaged food, hotel, and agri-business sales). It is a temporary income statement account closed out to Retained Earnings at year end.\n\nInventory, Cash, and Shareholder Equity are permanent Balance Sheet asset and liability accounts.",
+    "example": "ITC Limited FY24 Segment Revenue breakdown:\n• Total Operating Revenue: ~₹70,000 Crores\n• FMCG-Cigarettes: ~₹30,000 Crores\n• FMCG-Others (Aashirvaad, Sunfeast, Bingo): ~₹21,000 Crores\n• Agri-Business & Paperboards: ~₹19,000 Crores\nAll these appear on the P&L statement, whereas unsold grain inventory sits on the Balance Sheet.",
+    "interviewTip": "Rule of Thumb for Interview Brainteasers:\n'Income Statement tracks flows (velocities over time, like rainfall per hour); Balance Sheet tracks stocks (accumulations at a fixed date, like water in a reservoir). Revenue is an economic flow.'",
+    "tags": [
+      "income-statement",
+      "p-and-l",
+      "revenue",
+      "fmcg"
+    ],
+    "relatedConcepts": [
+      "Balance Sheet Items",
+      "Top-Line",
+      "COGS",
+      "Gross Margin"
+    ],
+    "hints": [
+      "Look for the item that describes economic activity generated across a financial year.",
+      "Three of these options represent things the company owns or owes at year-end.",
+      "Think about what constitutes 'top line' sales."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:15:00Z",
+      "updatedAt": "2024-01-15T10:15:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_1_5",
+    "level": 1,
+    "room": "1.1",
+    "roomName": "Financial Statements Basics",
+    "topic": "Solvency Ratios",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Adani Enterprises / Group",
+    "sector": "Infrastructure & Energy",
+    "question": "An infrastructure business unit under Adani Group carries Total Debt of ₹2,50,000 Crores and Shareholders' Total Equity of ₹1,00,000 Crores. What is its Debt-to-Equity (D/E) Ratio?",
+    "options": [
+      "0.40",
+      "1.50",
+      "2.50",
+      "4.00"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Debt-to-Equity (D/E) Ratio evaluates financial leverage:\n\nD/E = Total Debt / Shareholders' Equity\n= ₹2,50,000 Crores / ₹1,00,000 Crores = 2.50x\n\nThis indicates that lenders have funded ₹2.50 for every ₹1.00 provided by equity shareholders.",
+    "example": "Sector Comparison in India:\n• Infrastructure, Utilities & Toll Roads: D/E between 2.0x and 3.0x is common due to predictable government-backed annuity or PPA cash flows.\n• IT Services (TCS, Infosys): Near zero debt (D/E < 0.1x) because human capital requires negligible physical project leverage.\n• If you selected 0.40, you calculated Equity / Debt instead of Debt / Equity.",
+    "interviewTip": "Crucial Private Equity / Credit Interview Question: 'When is a D/E ratio of 2.5x safe, and when is it hazardous?'\n\nFramework:\n'Leverage safety depends on cash flow volatility and Interest Coverage Ratio (EBIT / Interest):\n1. Safe: Regulated utility, long-term 25-year Power Purchase Agreement (PPA) with NTPC, fixed low-cost financing.\n2. Hazardous: Cyclical commodity producer (like steel or shipping) facing volatile selling prices and variable repo-rate debt.'",
+    "tags": [
+      "debt-to-equity",
+      "leverage",
+      "solvency",
+      "infrastructure"
+    ],
+    "relatedConcepts": [
+      "Interest Coverage Ratio",
+      "Gearing Ratio",
+      "Credit Ratings",
+      "Default Risk"
+    ],
+    "hints": [
+      "Formula is Total Debt divided by Shareholders' Equity.",
+      "Divide 2,50,000 Crores by 1,00,000 Crores.",
+      "Notice the company has 2.5 times more debt than equity."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:20:00Z",
+      "updatedAt": "2024-01-15T10:20:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_2_1",
+    "level": 1,
+    "room": "1.2",
+    "roomName": "Financial Ratios & Metrics",
+    "topic": "Profitability Ratios",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Infosys",
+    "sector": "Information Technology",
+    "question": "Infosys reports Net Profit of ₹26,000 Crores on Shareholders' Equity of ₹80,000 Crores. What is its Return on Equity (ROE)?",
+    "options": [
+      "21.5%",
+      "26.0%",
+      "32.5%",
+      "40.0%"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Return on Equity (ROE) measures how efficiently management converts shareholder capital into bottom-line profits:\n\nROE = (Net Profit / Shareholders' Equity) * 100\n= (₹26,000 / ₹80,000) * 100 = 32.5%",
+    "example": "Indian IT bellwethers like Infosys and TCS routinely deliver superior ROE (30-40%) because of high asset turnover, robust pricing power, and minimal financial debt drag.",
+    "interviewTip": "Always remember the DuPont Decomposition: ROE = Net Profit Margin * Asset Turnover * Financial Leverage multiplier.",
+    "tags": [
+      "roe",
+      "profitability",
+      "dupont",
+      "it-services"
+    ],
+    "relatedConcepts": [
+      "ROCE",
+      "ROA",
+      "DuPont Analysis"
+    ],
+    "hints": [
+      "Divide Net Profit by Shareholders' Equity and convert to percentage.",
+      "26,000 divided by 80,000 equals 0.325."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:25:00Z",
+      "updatedAt": "2024-01-15T10:25:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_2_2",
+    "level": 1,
+    "room": "1.2",
+    "roomName": "Financial Ratios & Metrics",
+    "topic": "Liquidity Ratios",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Hindustan Unilever (HUL)",
+    "sector": "FMCG",
+    "question": "HUL has Current Assets of ₹15,000 Cr, Inventories of ₹5,000 Cr, and Current Liabilities of ₹10,000 Cr. What is its Quick Ratio (Acid-Test)?",
+    "options": [
+      "0.50x",
+      "1.00x",
+      "1.50x",
+      "2.00x"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Quick Ratio measures immediate liquidity by excluding inventories (which take time to convert into cash):\n\nQuick Assets = Current Assets - Inventories = ₹15,000 - ₹5,000 = ₹10,000 Cr\nQuick Ratio = Quick Assets / Current Liabilities = ₹10,000 / ₹10,000 = 1.00x",
+    "example": "In FMCG retail, inventory cannot be liquidated instantaneously without discounting, so lenders closely watch Quick Ratio.",
+    "interviewTip": "Interviewers love asking: 'Why subtract prepaid expenses and inventory from Quick Assets?' Because in bankruptcy, prepaid rent cannot pay off debts today and inventory fire-sales yield steep discounts.",
+    "tags": [
+      "quick-ratio",
+      "liquidity",
+      "fmcg",
+      "acid-test"
+    ],
+    "relatedConcepts": [
+      "Current Ratio",
+      "Cash Ratio",
+      "Working Capital"
+    ],
+    "hints": [
+      "First subtract inventories from total current assets.",
+      "Divide the remaining quick assets by current liabilities."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_3_1",
+    "level": 1,
+    "room": "1.3",
+    "roomName": "Time Value of Money",
+    "topic": "PV & FV",
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "company": "Tata Power",
+    "sector": "Renewable Power",
+    "question": "Tata Power evaluates an upfront investment offering a guaranteed ₹121 Lakhs cash flow at the end of Year 2. If the appropriate annual discount rate is 10%, what is the Present Value (PV)?",
+    "options": [
+      "₹90 Lakhs",
+      "₹100 Lakhs",
+      "₹110 Lakhs",
+      "₹120 Lakhs"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Present Value formula: PV = FV / (1 + r)^n\nPV = ₹121 Lakhs / (1 + 0.10)^2\nPV = ₹121 / 1.21 = ₹100 Lakhs.\n\n₹100 Lakhs invested today at 10% compound interest grows to ₹110L in Year 1 and ₹121L in Year 2.",
+    "example": "Project finance in Indian solar tariffs uses this discounted cash flow mechanism to price long-term bid contracts.",
+    "interviewTip": "Whenever discount rate r increases, Present Value declines. Be ready to explain the inverse relationship between interest rates and bond/project valuations.",
+    "tags": [
+      "present-value",
+      "tvm",
+      "discounting",
+      "project-finance"
+    ],
+    "relatedConcepts": [
+      "NPV",
+      "Discount Rate",
+      "Compound Interest"
+    ],
+    "hints": [
+      "Divide Future Value by (1 + 0.10) squared, which is 1.21.",
+      "121 divided by 1.21 equals exactly 100."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:35:00Z",
+      "updatedAt": "2024-01-15T10:35:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_2_1_1",
+    "level": 2,
+    "room": "2.1",
+    "roomName": "Working Capital Management",
+    "topic": "Cash Conversion Cycle",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Maruti Suzuki",
+    "sector": "Automotive",
+    "question": "Maruti Suzuki operates with Days Inventory Outstanding (DIO) of 20 days, Days Sales Outstanding (DSO) of 15 days, and Days Payables Outstanding (DPO) of 45 days. What is its Cash Conversion Cycle (CCC)?",
+    "options": [
+      "-10 days",
+      "10 days",
+      "35 days",
+      "80 days"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Cash Conversion Cycle formula: CCC = DIO + DSO - DPO\nCCC = 20 + 15 - 45 = -10 days.\n\nA negative CCC indicates that Maruti Suzuki gets paid by customers and turns inventory into cash 10 days BEFORE it has to pay its auto component suppliers—effectively funding operations through interest-free supplier credit!",
+    "example": "Companies with massive market clout like Maruti Suzuki and Amazon India enjoy negative working capital cycles.",
+    "interviewTip": "Negative CCC is holy grail in retail and auto assembly. Mention that working capital becomes a source of cash rather than a consumer of cash.",
+    "tags": [
+      "cash-conversion-cycle",
+      "working-capital",
+      "auto",
+      "dpo"
+    ],
+    "relatedConcepts": [
+      "Operating Cycle",
+      "Working Capital Optimization"
+    ],
+    "hints": [
+      "Add inventory days and receivables days, then subtract payables days.",
+      "20 + 15 - 45 = -10."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:40:00Z",
+      "updatedAt": "2024-01-15T10:40:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_2_2_1",
+    "level": 2,
+    "room": "2.2",
+    "roomName": "Valuation Fundamentals",
+    "topic": "Enterprise Value",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Bharti Airtel",
+    "sector": "Telecom",
+    "question": "Bharti Airtel has a Market Capitalization (Equity Value) of ₹8,00,000 Cr, Total Debt of ₹2,10,000 Cr, Cash & Cash Equivalents of ₹30,000 Cr, and Minority Interest of ₹20,000 Cr. What is its Enterprise Value (EV)?",
+    "options": [
+      "₹6,20,000 Crores",
+      "₹9,80,000 Crores",
+      "₹10,00,000 Crores",
+      "₹10,60,000 Crores"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Enterprise Value (EV) Bridge formula:\nEV = Equity Value (Market Cap) + Total Debt + Minority Interest + Preferred Stock - Cash & Cash Equivalents\n\nEV = ₹8,00,000 + ₹2,10,000 + ₹20,000 - ₹30,000 = ₹10,00,000 Crores.",
+    "example": "Airtel uses large spectrum debt and leases, making Enterprise Value the true theoretical takeover price for all capital providers.",
+    "interviewTip": "Why subtract cash? Because an acquirer can immediately use the target's cash to pay down the acquisition debt or distribute it.",
+    "tags": [
+      "enterprise-value",
+      "valuation",
+      "market-cap",
+      "telecom"
+    ],
+    "relatedConcepts": [
+      "Equity Value",
+      "Net Debt",
+      "EV/EBITDA"
+    ],
+    "hints": [
+      "EV = Market Cap + Debt + Minority Interest - Cash.",
+      "8,00,000 + 2,10,000 + 20,000 - 30,000."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:45:00Z",
+      "updatedAt": "2024-01-15T10:45:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_2_3_1",
+    "level": 2,
+    "room": "2.3",
+    "roomName": "Cost of Capital",
+    "topic": "CAPM Model",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Tata Motors",
+    "sector": "Automotive",
+    "question": "Using the Capital Asset Pricing Model (CAPM), calculate Tata Motors' Cost of Equity (Ke) if the Indian 10-year G-Sec Risk-Free Rate (Rf) is 7.0%, the Expected Nifty Market Return (Rm) is 13.0%, and Tata Motors' Equity Beta (β) is 1.25.",
+    "options": [
+      "12.5%",
+      "14.5%",
+      "16.25%",
+      "18.75%"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CAPM formula: Ke = Rf + β * (Rm - Rf)\nMarket Risk Premium (ERP) = Rm - Rf = 13.0% - 7.0% = 6.0%\nKe = 7.0% + 1.25 * (6.0%)\nKe = 7.0% + 7.5% = 14.5%",
+    "example": "Indian corporate finance teams typically use the 10-year Indian Government Bond yield (~7.0-7.2%) as the benchmark risk-free rate.",
+    "interviewTip": "Always note that Equity Risk Premium in emerging markets like India is higher (typically 5.5-6.5%) compared to US markets (4.5-5.5%).",
+    "tags": [
+      "capm",
+      "cost-of-equity",
+      "beta",
+      "wacc"
+    ],
+    "relatedConcepts": [
+      "Unlevered Beta",
+      "WACC",
+      "Cost of Debt"
+    ],
+    "hints": [
+      "First find Market Risk Premium (13% - 7% = 6%).",
+      "Multiply 6% by beta 1.25 to get 7.5%, then add 7% risk-free rate."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-15T10:50:00Z",
+      "updatedAt": "2024-01-15T10:50:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_2_3",
+    "level": 1,
+    "room": "1.2",
+    "roomName": "Financial Ratios & Metrics",
+    "topic": "DuPont Analysis",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Infosys",
+    "sector": "Information Technology",
+    "question": "Infosys reports a Net Profit Margin of 20%, an Asset Turnover of 1.25x, and an Equity Multiplier (Assets/Equity) of 1.20x. Using 3-step DuPont Analysis, what is Infosys's Return on Equity (ROE)?",
+    "options": [
+      "24.0%",
+      "30.0%",
+      "32.5%",
+      "36.0%"
+    ],
+    "correctAnswer": 1,
+    "explanation": "3-step DuPont Formula:\nROE = Net Profit Margin × Asset Turnover × Equity Multiplier\nROE = 20% × 1.25 × 1.20\nROE = 0.20 × 1.50 = 30.0%",
+    "example": "Top Indian IT firms consistently deliver 25-35% ROE primarily driven by high net margins and zero debt (low equity multiplier), unlike banks that drive ROE through leverage.",
+    "interviewTip": "When asked 'How can a company increase its ROE without taking on debt?', mention improving Net Margins (pricing power/cost control) or Asset Turnover (better working capital/capacity utilization).",
+    "tags": [
+      "dupont",
+      "roe",
+      "profitability",
+      "it-services"
+    ],
+    "relatedConcepts": [
+      "ROCE",
+      "ROIC",
+      "Asset Turnover",
+      "Financial Leverage"
+    ],
+    "hints": [
+      "Multiply Net Margin (20%) by Asset Turnover (1.25) to get ROA (25%).",
+      "Multiply ROA (25%) by the Equity Multiplier (1.20) to reach ROE."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:00:00Z",
+      "updatedAt": "2024-01-16T10:00:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_2_4",
+    "level": 1,
+    "room": "1.2",
+    "roomName": "Financial Ratios & Metrics",
+    "topic": "Interest Coverage Ratio",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Tata Steel",
+    "sector": "Metals & Mining",
+    "question": "Tata Steel reports Operating Profit (EBIT) of ₹24,000 Crores and Annual Finance Costs (Interest Expense) of ₹4,000 Crores. What is its Interest Coverage Ratio?",
+    "options": [
+      "3.0x",
+      "4.5x",
+      "6.0x",
+      "8.0x"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Interest Coverage Ratio = EBIT / Interest Expense\nRatio = ₹24,000 Cr / ₹4,000 Cr = 6.0x.\n\nThis means Tata Steel's operating earnings can pay its annual interest burden 6 times over, reflecting comfortable debt servicing capacity.",
+    "example": "Credit rating agencies like CRISIL and ICRA look for at least 3.0x interest coverage for investment grade ratings in cyclical sectors like Indian steel.",
+    "interviewTip": "State the formula immediately: EBIT / Interest. Note that ICR uses EBIT (not PAT) because interest is deducted before calculating tax.",
+    "tags": [
+      "solvency",
+      "interest-coverage",
+      "debt-servicing",
+      "metals"
+    ],
+    "relatedConcepts": [
+      "DSCR",
+      "EBITDA",
+      "Credit Rating"
+    ],
+    "hints": [
+      "Formula is EBIT divided by Interest Expense.",
+      "24,000 divided by 4,000 equals 6."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:05:00Z",
+      "updatedAt": "2024-01-16T10:05:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_3_2",
+    "level": 1,
+    "room": "1.3",
+    "roomName": "Time Value of Money",
+    "topic": "Net Present Value (NPV)",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Larsen & Toubro (L&T)",
+    "sector": "Infrastructure",
+    "question": "L&T evaluates an infrastructure project requiring an upfront capital outlay (Year 0) of ₹500 Crores. The project generates cash flows of ₹330 Crores in Year 1 and ₹363 Crores in Year 2. If L&T's hurdle rate is 10%, what is the Net Present Value (NPV)?",
+    "options": [
+      "₹50 Crores",
+      "₹100 Crores",
+      "₹150 Crores",
+      "₹193 Crores"
+    ],
+    "correctAnswer": 1,
+    "explanation": "NPV = -Initial Outlay + PV(Year 1) + PV(Year 2)\nPV(Year 1) = ₹330 / 1.10 = ₹300 Crores\nPV(Year 2) = ₹363 / (1.10)^2 = ₹363 / 1.21 = ₹300 Crores\nTotal PV of inflows = ₹300 + ₹300 = ₹600 Crores\nNPV = ₹600 Cr - ₹500 Cr = ₹100 Crores.",
+    "example": "Indian EPC giants accept bids only when NPV > 0 at a hurdle rate that incorporates raw material price volatility and milestone delay risk.",
+    "interviewTip": "If NPV is positive at the hurdle rate, the project's Internal Rate of Return (IRR) is strictly greater than the hurdle rate (10%). Always mention this rule in corporate finance interviews.",
+    "tags": [
+      "npv",
+      "capital-budgeting",
+      "hurdle-rate",
+      "infrastructure"
+    ],
+    "relatedConcepts": [
+      "IRR",
+      "Payback Period",
+      "Profitability Index"
+    ],
+    "hints": [
+      "Discount Year 1 cash flow by 1.10 to get 300.",
+      "Discount Year 2 cash flow by 1.21 to get 300. Total PV is 600.",
+      "Subtract initial 500 from 600."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:10:00Z",
+      "updatedAt": "2024-01-16T10:10:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_1_3_3",
+    "level": 1,
+    "room": "1.3",
+    "roomName": "Time Value of Money",
+    "topic": "Perpetuity Valuation",
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "company": "DLF CyberCity",
+    "sector": "Commercial Real Estate (REIT)",
+    "question": "DLF CyberCity receives a perpetual annual net rental cash flow of ₹80 Crores from an anchor multinational tenant. If the applicable capitalization / discount rate is 8%, what is the Present Value of this perpetuity?",
+    "options": [
+      "₹640 Crores",
+      "₹800 Crores",
+      "₹1,000 Crores",
+      "₹1,200 Crores"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Perpetuity Formula: PV = Cash Flow / Discount Rate\nPV = ₹80 Crores / 0.08\nPV = ₹1,000 Crores.",
+    "example": "Indian Real Estate Investment Trusts (Embassy, Nexus, Mindspace REITs) value grade-A commercial office parks using capitalization rate perpetuities.",
+    "interviewTip": "Remember: Value of a growing perpetuity is CF1 / (r - g). Here growth is zero, so it simplifies to CF / r.",
+    "tags": [
+      "perpetuity",
+      "reit",
+      "real-estate",
+      "discounting"
+    ],
+    "relatedConcepts": [
+      "Gordon Growth Model",
+      "Capitalization Rate",
+      "Terminal Value"
+    ],
+    "hints": [
+      "Divide 80 by 0.08.",
+      "80 / 0.08 is identical to 80 * (100 / 8) = 1,000."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:15:00Z",
+      "updatedAt": "2024-01-16T10:15:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_2_1_2",
+    "level": 2,
+    "room": "2.1",
+    "roomName": "Working Capital Management",
+    "topic": "Operating Cycle",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Asian Paints",
+    "sector": "Consumer Goods & Paints",
+    "question": "Asian Paints has Days Sales of Inventory (DSI) of 55 days and Days Sales Outstanding (DSO) of 35 days. What is its Gross Operating Cycle?",
+    "options": [
+      "20 days",
+      "55 days",
+      "90 days",
+      "120 days"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Operating Cycle = Days Inventory + Days Receivables = 55 days + 35 days = 90 days.\n\nNote: Net Working Capital Cycle (Cash Conversion Cycle) subtracts Accounts Payable (DPO) from this figure.",
+    "example": "Asian Paints maintains automated dealer tinting machines across thousands of Indian retail outlets, shortening its inventory replenishment cycle.",
+    "interviewTip": "Distinguish clearly between Operating Cycle (DSI + DSO) and Cash Conversion Cycle (DSI + DSO - DPO). The former tracks operational conversion, the latter tracks cash financing duration.",
+    "tags": [
+      "operating-cycle",
+      "inventory",
+      "receivables",
+      "working-capital"
+    ],
+    "relatedConcepts": [
+      "Cash Conversion Cycle",
+      "DPO",
+      "Working Capital"
+    ],
+    "hints": [
+      "Add inventory holding period to receivables collection period.",
+      "55 + 35 = 90."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:20:00Z",
+      "updatedAt": "2024-01-16T10:20:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_2_2_2",
+    "level": 2,
+    "room": "2.2",
+    "roomName": "Valuation Fundamentals",
+    "topic": "Valuation Multiples",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Sun Pharma",
+    "sector": "Pharmaceuticals",
+    "question": "Sun Pharma has an Enterprise Value (EV) of ₹3,60,000 Crores and annual EBITDA of ₹24,000 Crores. A peer, Dr. Reddy's Laboratories, trades at an EV/EBITDA multiple of 17.0x. Based on Dr. Reddy's multiple, what would Sun Pharma's implied Enterprise Value be?",
+    "options": [
+      "₹3,40,000 Crores",
+      "₹3,84,000 Crores",
+      "₹4,08,000 Crores",
+      "₹4,32,000 Crores"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Implied EV = Sun Pharma EBITDA × Peer Multiple\nImplied EV = ₹24,000 Crores × 17.0 = ₹4,08,000 Crores.\n\nSince Sun Pharma's actual EV is ₹3,60,000 Cr (15.0x), it currently trades at a discount to Dr. Reddy's.",
+    "example": "In Indian pharmaceutical research coverage, EV/EBITDA is preferred over P/E because it neutralizes differing tax jurisdictions and US FDA plant amortization schedules.",
+    "interviewTip": "Multiples Rule: Enterprise Value multiples (EV/Sales, EV/EBITDA, EV/EBIT) must always pair with unlevered, pre-debt metrics. Never pair EV with Net Income or Market Cap with EBITDA!",
+    "tags": [
+      "ev-ebitda",
+      "comparable-company-analysis",
+      "pharma",
+      "multiples"
+    ],
+    "relatedConcepts": [
+      "Trading Comps",
+      "Precedent Transactions",
+      "P/E Ratio"
+    ],
+    "hints": [
+      "Multiply 24,000 by 17.",
+      "24,000 * 17 = 4,08,000."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:25:00Z",
+      "updatedAt": "2024-01-16T10:25:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_2_3_2",
+    "level": 2,
+    "room": "2.3",
+    "roomName": "Cost of Capital",
+    "topic": "WACC Calculation",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "Reliance Industries",
+    "sector": "Conglomerate",
+    "question": "Reliance Industries has 70% Equity and 30% Debt in its target capital structure. Its Cost of Equity (Ke) is 14.0%, and its Pre-tax Cost of Debt (Kd) is 8.0%. If the Indian corporate income tax rate is 25%, what is Reliance's Weighted Average Cost of Capital (WACC)?",
+    "options": [
+      "10.8%",
+      "11.6%",
+      "12.2%",
+      "12.8%"
+    ],
+    "correctAnswer": 1,
+    "explanation": "WACC Formula: WACC = (E/V × Ke) + [D/V × Kd × (1 - t)]\nAfter-tax Cost of Debt = 8.0% × (1 - 0.25) = 6.0%\nEquity Contribution = 70% × 14.0% = 9.8%\nDebt Contribution = 30% × 6.0% = 1.8%\nWACC = 9.8% + 1.8% = 11.6%",
+    "example": "Indian corporate conglomerates benefit from tax shields on interest expense, lowering their hurdle rate for capital-intensive refinery and 5G telecom rollouts.",
+    "interviewTip": "Always remember to multiply the cost of debt by (1 - Tax Rate). Interest expense is tax-deductible in India, whereas dividends paid to equity holders are not.",
+    "tags": [
+      "wacc",
+      "cost-of-capital",
+      "tax-shield",
+      "conglomerate"
+    ],
+    "relatedConcepts": [
+      "Cost of Equity",
+      "Cost of Debt",
+      "Capital Structure"
+    ],
+    "hints": [
+      "After-tax debt cost is 8% * (1 - 0.25) = 6%.",
+      "Multiply 70% by 14% (9.8%) and 30% by 6% (1.8%), then sum them."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:30:00Z",
+      "updatedAt": "2024-01-16T10:30:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_3_1_1",
+    "level": 3,
+    "room": "3.1",
+    "roomName": "Financial Modeling",
+    "topic": "3-Statement Linking",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "Infosys",
+    "sector": "Information Technology",
+    "question": "In a 3-statement financial model, Infosys's Depreciation increases by ₹1,000 Crores. Assuming a corporate tax rate of 25%, what is the net impact on the Cash Flow Statement and ending Cash balance?",
+    "options": [
+      "Cash decreases by ₹1,000 Crores",
+      "Cash decreases by ₹750 Crores",
+      "Cash increases by ₹250 Crores",
+      "Cash increases by ₹750 Crores"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Walk through the 3 statements:\n1. Income Statement: Operating Income (EBIT) drops by ₹1,000 Cr. Taxes drop by 25% of ₹1,000 = ₹250 Cr. Net Income decreases by ₹750 Cr.\n2. Cash Flow Statement: Net Income starts -₹750 Cr. Add back non-cash Depreciation +₹1,000 Cr.\nNet Cash Flow from Operations = -₹750 + ₹1,000 = +₹250 Crores (the Depreciation tax shield!).\n3. Balance Sheet: Cash goes up by ₹250 Cr, PP&E drops by ₹1,000 Cr (Assets net -₹750 Cr), Retained Earnings drops by ₹750 Cr (Equity net -₹750 Cr). It balances!",
+    "example": "This classic Wall Street and Dalal Street interview question tests understanding of the non-cash tax shield on capital expenditures.",
+    "interviewTip": "Memorize the shortcut for depreciation increase: ΔCash = ΔDepreciation × Tax Rate. Here: 1,000 × 25% = +250 Crores.",
+    "tags": [
+      "3-statement-model",
+      "depreciation",
+      "tax-shield",
+      "cash-flow"
+    ],
+    "relatedConcepts": [
+      "Income Statement",
+      "Balance Sheet",
+      "Cash Flow from Operations"
+    ],
+    "hints": [
+      "Depreciation is non-cash: Net Income falls by (1 - t), but full depreciation is added back.",
+      "-750 + 1,000 = +250."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:35:00Z",
+      "updatedAt": "2024-01-16T10:35:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_3_1_2",
+    "level": 3,
+    "room": "3.1",
+    "roomName": "Financial Modeling",
+    "topic": "Working Capital on Cash Flow",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Vedanta Limited",
+    "sector": "Mining & Natural Resources",
+    "question": "During FY24, Vedanta's Accounts Receivable increases by ₹800 Crores and Accounts Payable increases by ₹500 Crores. How does this net working capital change impact Cash Flow from Operations (CFO)?",
+    "options": [
+      "Net increase of ₹300 Crores to Cash",
+      "Net decrease of ₹300 Crores from Cash",
+      "Net decrease of ₹1,300 Crores from Cash",
+      "Zero net impact on Cash"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cash Flow adjustments:\n• Increase in Accounts Receivable = Cash outflow (-₹800 Cr, customers owe cash that was booked in revenue but not collected).\n• Increase in Accounts Payable = Cash inflow (+₹500 Cr, supplier credit preserved cash).\nNet change in Operating Cash Flow = -₹800 + ₹500 = -₹300 Crores.",
+    "example": "Working capital adjustments on the Cash Flow statement bridge the gap between accrual-based Net Income and actual cash in the bank.",
+    "interviewTip": "Remember the mnemonic: Assets up = Cash down (source/use). Liabilities up = Cash up.",
+    "tags": [
+      "working-capital",
+      "cfo",
+      "receivables",
+      "payables"
+    ],
+    "relatedConcepts": [
+      "Accrual Accounting",
+      "Cash Conversion",
+      "Financial Modeling"
+    ],
+    "hints": [
+      "Receivables increase drains cash (-800).",
+      "Payables increase preserves cash (+500). -800 + 500 = -300."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:40:00Z",
+      "updatedAt": "2024-01-16T10:40:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_3_2_1",
+    "level": 3,
+    "room": "3.2",
+    "roomName": "Investment Analysis",
+    "topic": "Unlevered Free Cash Flow (FCFF)",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "Titan Company",
+    "sector": "Consumer Discretionary & Jewellery",
+    "question": "Titan Company reports EBIT of ₹4,000 Crores. The tax rate is 25%. For the year, Depreciation & Amortization is ₹600 Crores, Capital Expenditures (CapEx) are ₹900 Crores, and Net Working Capital increased by ₹300 Crores. What is Titan's Free Cash Flow to Firm (FCFF)?",
+    "options": [
+      "₹2,400 Crores",
+      "₹2,800 Crores",
+      "₹3,400 Crores",
+      "₹3,700 Crores"
+    ],
+    "correctAnswer": 0,
+    "explanation": "FCFF Formula:\nFCFF = EBIT × (1 - t) + D&A - CapEx - ΔNWC\nNOPAT = ₹4,000 × (1 - 0.25) = ₹3,000 Crores\nFCFF = ₹3,000 + ₹600 - ₹900 - ₹300\nFCFF = ₹3,600 - ₹1,200 = ₹2,400 Crores.",
+    "example": "Titan's Tanishq jewelry expansion demands upfront gold inventory (NWC) and store fit-outs (CapEx), directly impacting its annual FCFF.",
+    "interviewTip": "Distinguish between FCFF (Free Cash Flow to Firm, unlevered, discounted at WACC) and FCFE (Free Cash Flow to Equity, levered, discounted at Cost of Equity).",
+    "tags": [
+      "fcff",
+      "dcf",
+      "free-cash-flow",
+      "valuation"
+    ],
+    "relatedConcepts": [
+      "FCFE",
+      "NOPAT",
+      "DCF Valuation"
+    ],
+    "hints": [
+      "NOPAT is 4,000 * 0.75 = 3,000.",
+      "Add 600 D&A, then subtract 900 CapEx and 300 NWC change: 3,000 + 600 - 900 - 300 = 2,400."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:45:00Z",
+      "updatedAt": "2024-01-16T10:45:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_3_2_2",
+    "level": 3,
+    "room": "3.2",
+    "roomName": "Investment Analysis",
+    "topic": "Terminal Value (Gordon Growth)",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Larsen & Toubro",
+    "sector": "Capital Goods",
+    "question": "In an L&T DCF model, the projected Year 5 Free Cash Flow is ₹10,000 Crores. The long-term perpetual growth rate (g) is 5.0%, and the WACC is 11.0%. What is the Terminal Value (TV) at the end of Year 5?",
+    "options": [
+      "₹1,45,000 Crores",
+      "₹1,66,667 Crores",
+      "₹1,75,000 Crores",
+      "₹2,10,000 Crores"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Gordon Growth Terminal Value Formula:\nTV = [FCF5 × (1 + g)] / (WACC - g)\nTerminal Year FCF = ₹10,000 × (1 + 0.05) = ₹10,500 Crores\nWACC - g = 11.0% - 5.0% = 6.0% (0.06)\nTV = ₹10,500 / 0.06 = ₹1,75,000 Crores.",
+    "example": "In Indian DCF valuations, long-term perpetual growth rate g is generally capped at the expected long-term GDP growth rate of India (~5-6%).",
+    "interviewTip": "Common interview trap: Don't forget to multiply Year 5 cash flow by (1 + g) to find Year 6 cash flow in the numerator!",
+    "tags": [
+      "terminal-value",
+      "gordon-growth",
+      "dcf",
+      "valuation"
+    ],
+    "relatedConcepts": [
+      "Exit Multiple",
+      "WACC",
+      "Perpetuity"
+    ],
+    "hints": [
+      "Numerator is 10,000 * 1.05 = 10,500.",
+      "Denominator is 11% - 5% = 6%. 10,500 / 0.06 = 1,75,000."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:50:00Z",
+      "updatedAt": "2024-01-16T10:50:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_3_3_1",
+    "level": 3,
+    "room": "3.3",
+    "roomName": "Corporate Finance Decisions",
+    "topic": "Dividend vs Share Buyback",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "TCS",
+    "sector": "Information Technology",
+    "question": "TCS distributes ₹18,000 Crores of surplus cash to shareholders via a tender offer Share Buyback at a premium, instead of a special dividend. Which of the following is an immediate mathematical consequence of the buyback?",
+    "options": [
+      "Total shares outstanding decreases, increasing Earnings Per Share (EPS)",
+      "Total shares outstanding increases, diluting EPS",
+      "Net Income increases due to lower share count",
+      "Company book value of equity increases"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When shares are repurchased and extinguished:\n1. Total shares outstanding decreases.\n2. Since Net Income is divided by fewer shares, EPS (Earnings Per Share) increases.\n3. Cash decreases and Treasury/Equity decreases on the Balance Sheet.",
+    "example": "Indian IT companies (TCS, Infosys, Wipro) historically favored buybacks for surplus cash distribution due to tax efficiency for institutional and retail investors.",
+    "interviewTip": "In interviews, note that buybacks only increase shareholder intrinsic value if the stock is repurchased at or below intrinsic value. If repurchased at overvalued prices, it destroys value for remaining shareholders.",
+    "tags": [
+      "buyback",
+      "dividend",
+      "capital-allocation",
+      "eps"
+    ],
+    "relatedConcepts": [
+      "EPS Accretion",
+      "Capital Structure",
+      "Shareholder Yield"
+    ],
+    "hints": [
+      "EPS = Net Income / Shares Outstanding.",
+      "If the denominator decreases while numerator stays the same, EPS rises."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T10:55:00Z",
+      "updatedAt": "2024-01-16T10:55:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_4_1_1",
+    "level": 4,
+    "room": "4.1",
+    "roomName": "M&A Fundamentals",
+    "topic": "EPS Accretion / Dilution",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "HDFC Bank & HDFC Ltd",
+    "sector": "Banking & Financial Services",
+    "question": "Company A is acquiring Company B in an all-stock transaction. Company A trades at a P/E multiple of 25.0x, while Company B trades at a P/E multiple of 15.0x. Assuming no synergies and identical tax rates, will the acquisition be EPS accretive or dilutive for Company A?",
+    "options": [
+      "Accretive, because Acquirer P/E > Target P/E",
+      "Dilutive, because Acquirer P/E > Target P/E",
+      "Neutral, because stock transactions are always non-dilutive",
+      "Dilutive, because Target's earnings yield is lower"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Rule of Thumb for 100% Stock Deals:\n• If Acquirer P/E > Target P/E, the deal is ACCRETIVE.\n• If Acquirer P/E < Target P/E, the deal is DILUTIVE.\n\nReasoning: Company A's stock is relatively expensive (earnings yield of 1/25 = 4%), while Company B's earnings yield is higher (1/15 = 6.67%). Company A issues fewer expensive shares to purchase a larger stream of earnings!",
+    "example": "When HDFC Bank acquired HDFC Limited in a mega-merger, exchange ratios and relative P/E multiples were scrutinized for EPS accretion.",
+    "interviewTip": "This is one of the most tested M&A interview rules. Memorize: High P/E buying Low P/E with stock is ALWAYS accretive before transaction fees and write-downs.",
+    "tags": [
+      "m-and-a",
+      "accretion-dilution",
+      "pe-multiple",
+      "banking"
+    ],
+    "relatedConcepts": [
+      "Cost of Equity",
+      "Exchange Ratio",
+      "Synergies"
+    ],
+    "hints": [
+      "The acquirer's shares are valued higher (25x) than the target's (15x).",
+      "High P/E buying Low P/E with stock increases earnings per share."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:00:00Z",
+      "updatedAt": "2024-01-16T11:00:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_4_1_2",
+    "level": 4,
+    "room": "4.1",
+    "roomName": "M&A Fundamentals",
+    "topic": "Goodwill Calculation",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Zomato & Blinkit",
+    "sector": "Quick Commerce & Tech",
+    "question": "Zomato acquires quick commerce firm Blinkit for an Equity Purchase Price of ₹4,500 Crores. Blinkit's Fair Market Value of Identifiable Net Assets (Assets minus Liabilities) is ₹1,200 Crores. What is the Goodwill created on Zomato's consolidated balance sheet?",
+    "options": [
+      "₹1,200 Crores",
+      "₹3,300 Crores",
+      "₹4,500 Crores",
+      "₹5,700 Crores"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Goodwill Formula:\nGoodwill = Equity Purchase Price - Fair Market Value of Net Identifiable Assets\nGoodwill = ₹4,500 Crores - ₹1,200 Crores = ₹3,300 Crores.",
+    "example": "Goodwill reflects intangible brand premium, warehouse network density, technology IP, and dark store synergies not recognized on historical balance sheets.",
+    "interviewTip": "Remember: Under Indian Accounting Standards (Ind AS 103) and IFRS, Goodwill is NOT amortized over time; instead, it is tested annually for impairment.",
+    "tags": [
+      "goodwill",
+      "m-and-a",
+      "purchase-price-allocation",
+      "e-commerce"
+    ],
+    "relatedConcepts": [
+      "Intangibles",
+      "Ind AS 103",
+      "Impairment Testing"
+    ],
+    "hints": [
+      "Subtract net asset value from purchase price.",
+      "4,500 - 1,200 = 3,300."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:05:00Z",
+      "updatedAt": "2024-01-16T11:05:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_4_2_1",
+    "level": 4,
+    "room": "4.2",
+    "roomName": "Risk Management",
+    "topic": "FX Hedging with Forwards",
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "company": "Wipro",
+    "sector": "IT Services & BPO",
+    "question": "Wipro bills a US Fortune 500 client $100 Million payable in 6 months. To eliminate currency risk from USD/INR depreciation, Wipro enters into a 6-month Forward Contract with an Indian bank to sell USD at ₹84.50 per USD. If the Spot exchange rate at maturity turns out to be ₹83.00, how much INR does Wipro realize?",
+    "options": [
+      "₹8,300 Crores",
+      "₹8,450 Crores",
+      "₹8,600 Crores",
+      "₹8,750 Crores"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A forward contract is a binding legal commitment to exchange currency at the contracted forward rate regardless of future spot rates.\nINR Realized = $100 Million × ₹84.50 = ₹8,450 Crores.\n\nBecause Wipro locked in the forward rate at ₹84.50, it gained an extra ₹150 Crores compared to the spot market rate of ₹83.00.",
+    "example": "Indian IT companies hedge 50-70% of rolling 12-month net dollar receivables via OTC forward contracts and options with banks.",
+    "interviewTip": "Distinguish between forward contracts (customized, OTC, credit risk, binding) and futures (standardized, exchange-traded, daily marked-to-market).",
+    "tags": [
+      "fx-hedging",
+      "forward-contract",
+      "risk-management",
+      "it-services"
+    ],
+    "relatedConcepts": [
+      "Covered Interest Parity",
+      "Currency Options",
+      "Spot vs Forward"
+    ],
+    "hints": [
+      "The forward contract locks in the agreed rate.",
+      "100M * 84.50 = 8,450 Crores."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:10:00Z",
+      "updatedAt": "2024-01-16T11:10:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_4_3_1",
+    "level": 4,
+    "room": "4.3",
+    "roomName": "Strategic Finance",
+    "topic": "Unit Economics & LTV:CAC",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "PB Fintech (Policybazaar)",
+    "sector": "Insurtech & Consumer Tech",
+    "question": "An Indian fintech startup acquires insurance customers at a Customer Acquisition Cost (CAC) of ₹1,500. The Average Annual Revenue Per User (ARPU) is ₹1,000, with a Gross Contribution Margin of 60% and an annual customer churn rate of 20%. What is the Customer Lifetime Value to CAC ratio (LTV:CAC)?",
+    "options": [
+      "1.5x",
+      "2.0x",
+      "3.0x",
+      "4.5x"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Step 1: Calculate Average Customer Lifespan = 1 / Churn Rate = 1 / 0.20 = 5 years.\nStep 2: Annual Contribution Margin per User = ₹1,000 × 60% = ₹600 per year.\nStep 3: LTV = Annual Contribution Margin × Lifespan = ₹600 × 5 = ₹3,000.\nStep 4: LTV:CAC = ₹3,000 / ₹1,500 = 2.0x.",
+    "example": "Venture Capital investors benchmark healthy Indian tech startups at LTV:CAC ≥ 3.0x with CAC payback periods under 12-18 months.",
+    "interviewTip": "If asked how to improve LTV:CAC, identify levers: 1) Increase ARPU through cross-selling, 2) Lower churn (improving retention), 3) Increase gross margin, or 4) Optimize organic referral acquisition.",
+    "tags": [
+      "unit-economics",
+      "ltv-cac",
+      "fintech",
+      "churn"
+    ],
+    "relatedConcepts": [
+      "CAC Payback Period",
+      "Churn Rate",
+      "Contribution Margin"
+    ],
+    "hints": [
+      "Average lifespan is 1 / 0.20 = 5 years.",
+      "Annual margin is 1,000 * 60% = 600. LTV is 600 * 5 = 3,000.",
+      "3,000 / 1,500 = 2.0x."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:15:00Z",
+      "updatedAt": "2024-01-16T11:15:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_5_1_1",
+    "level": 5,
+    "room": "5.1",
+    "roomName": "Advanced Valuation",
+    "topic": "Sum-of-the-Parts (SOTP)",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "Reliance Industries",
+    "sector": "Diversified Conglomerate",
+    "question": "An analyst performs a Sum-of-the-Parts (SOTP) valuation for a diversified Indian group. Enterprise Values of subsidiaries are: Oil-to-Chemicals ₹4,50,000 Cr, Telecom ₹6,50,000 Cr, and Retail ₹5,00,000 Cr. The holding company has Net Debt of ₹1,00,000 Cr, and the market applies a 15% Conglomerate Holding Company Discount to total subsidiary asset value. What is the implied Equity Value?",
+    "options": [
+      "₹12,60,000 Crores",
+      "₹13,60,000 Crores",
+      "₹15,00,000 Crores",
+      "₹16,00,000 Crores"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Total Gross EV of Segments = ₹4,50,000 + ₹6,50,000 + ₹5,00,000 = ₹16,00,000 Crores.\nApplying 15% Conglomerate Discount = ₹16,00,000 × (1 - 0.15) = ₹13,60,000 Crores.\nImplied Equity Value = Discounted EV - Net Debt = ₹13,60,000 Cr - ₹1,00,000 Cr = ₹12,60,000 Crores.",
+    "example": "Indian holding companies like Bajaj Holdings, Tata Sons, and Mahindra & Mahindra are routinely valued using SOTP discounts of 15-40% due to dividend leakage taxes and capital misallocation risks.",
+    "interviewTip": "Why does the holding company discount exist in India? 1) Double taxation of dividends, 2) Lack of capital transparency across promoter entities, 3) Agency costs.",
+    "tags": [
+      "sotp",
+      "conglomerate-discount",
+      "advanced-valuation",
+      "equity-value"
+    ],
+    "relatedConcepts": [
+      "Enterprise Value",
+      "Net Debt",
+      "Holding Company"
+    ],
+    "hints": [
+      "Total segments EV is 16,00,000.",
+      "Discounted EV = 16,00,000 * 0.85 = 13,60,000.",
+      "Subtract 1,00,000 Net Debt = 12,60,000."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:20:00Z",
+      "updatedAt": "2024-01-16T11:20:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_5_2_1",
+    "level": 5,
+    "room": "5.2",
+    "roomName": "Capital Structure Optimization",
+    "topic": "Trade-off Theory & WACC",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "UltraTech Cement",
+    "sector": "Building Materials & Cement",
+    "question": "Under the static trade-off theory of capital structure, what occurs as a company continuously increases its debt-to-equity ratio beyond its optimal debt capacity?",
+    "options": [
+      "WACC continues falling indefinitely due to permanent interest tax shields",
+      "Expected costs of financial distress and bankruptcy outweigh incremental tax shields, causing WACC to rise",
+      "Cost of equity decreases because debtholders assume equity risk",
+      "Enterprise Value increases exponentially without limit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Static Trade-off Theory states that initial debt lowers WACC due to the corporate interest tax shield. However, as leverage climbs past optimal capacity, the marginal expected costs of financial distress (higher borrowing spreads, vendor distress, agency costs) eclipse tax shields, driving WACC up and destroying firm value.",
+    "example": "UltraTech Cement balances debt for kilns and acquisitions while maintaining an investment-grade balance sheet (Net Debt/EBITDA < 1.5x).",
+    "interviewTip": "Sketch the U-shaped WACC curve in your mind: optimal capital structure minimizes WACC and simultaneously maximizes firm value.",
+    "tags": [
+      "capital-structure",
+      "trade-off-theory",
+      "financial-distress",
+      "wacc"
+    ],
+    "relatedConcepts": [
+      "Modigliani-Miller",
+      "Bankruptcy Costs",
+      "Tax Shield"
+    ],
+    "hints": [
+      "Think about what happens to lenders' risk demands when a company takes on too much debt.",
+      "Financial distress costs begin to exceed tax benefits."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:25:00Z",
+      "updatedAt": "2024-01-16T11:25:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_5_3_1",
+    "level": 5,
+    "room": "5.3",
+    "roomName": "FINAL CHALLENGE",
+    "topic": "Private Equity LBO Returns",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "ChrysCapital / KKR India",
+    "sector": "Private Equity Buyout",
+    "question": "A Private Equity fund invests ₹500 Crores of sponsor equity to acquire an Indian healthcare chain in a leveraged buyout (LBO). After 5 years, the fund exits the investment and realizes ₹1,600 Crores in equity proceeds. What is the fund's Multiple on Invested Capital (MoIC) and approximate Internal Rate of Return (IRR)?",
+    "options": [
+      "2.2x MoIC and ~15% IRR",
+      "3.2x MoIC and ~26% IRR",
+      "3.2x MoIC and ~45% IRR",
+      "4.0x MoIC and ~32% IRR"
+    ],
+    "correctAnswer": 1,
+    "explanation": "MoIC = Exit Equity / Entry Equity = ₹1,600 Cr / ₹500 Cr = 3.20x.\nAnnualized IRR Formula: (MoIC)^(1/5) - 1\n(3.20)^(0.20) - 1 ≈ 1.262 - 1 = 26.2%.\n\nRule of thumb: In PE interviews, 2.0x in 5 yrs ≈ 15% IRR, 2.5x in 5 yrs ≈ 20% IRR, 3.0x in 5 yrs ≈ 25% IRR.",
+    "example": "Top tier Indian PE funds target minimum 25% gross USD/INR IRRs and 2.5-3.0x MoIC across healthcare and consumer portfolio exits.",
+    "interviewTip": "Memorize PE mental math: 2x in 3 yrs = 26% IRR; 2x in 5 yrs = 15% IRR; 3x in 5 yrs = 25% IRR. This demonstrates senior associate / VP speed in case study rounds.",
+    "tags": [
+      "lbo",
+      "private-equity",
+      "moic",
+      "irr"
+    ],
+    "relatedConcepts": [
+      "Leveraged Buyout",
+      "Sponsor Returns",
+      "Exit Multiple"
+    ],
+    "hints": [
+      "MoIC is 1,600 / 500 = 3.2x.",
+      "Rule of thumb: 3.0x to 3.2x over 5 years is roughly 25-26% annual IRR."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:30:00Z",
+      "updatedAt": "2024-01-16T11:30:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  },
+  {
+    "id": "q_5_3_2",
+    "level": 5,
+    "room": "5.3",
+    "roomName": "FINAL CHALLENGE",
+    "topic": "Comprehensive Corporate Finance",
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "company": "Tata Motors & JLR",
+    "sector": "Cross-Border Automotive",
+    "question": "When Tata Motors acquired Jaguar Land Rover (JLR) for $2.3 Billion, which financial distress indicator would a distressed debt hedge fund monitor most closely to assess insolvency risk during a global downturn?",
+    "options": [
+      "Price to Book (P/B) Ratio",
+      "Fixed Charge Coverage Ratio (FCCR) and Free Cash Flow to Debt",
+      "Dividend Payout Ratio",
+      "Gross Revenue Growth Rate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fixed Charge Coverage Ratio (EBITDA - CapEx - Cash Taxes) / (Debt Service + Lease Payments) and Free Cash Flow to Debt directly reveal whether operating cash can service mandatory contractual interest and principal obligations when revenues plunge.",
+    "example": "Tata Motors successfully navigated JLR's liquidity squeeze post-acquisition through bridge loan refinancing and rights issues on the BSE.",
+    "interviewTip": "Distressed debt and special situations investors focus on cash burn, liquidity runway, and fixed charge coverage—not accounting metrics like P/E or P/B.",
+    "tags": [
+      "distressed-debt",
+      "fixed-charge-coverage",
+      "cross-border-ma",
+      "solvency"
+    ],
+    "relatedConcepts": [
+      "Debt Service Coverage Ratio",
+      "Liquidity",
+      "Restructuring"
+    ],
+    "hints": [
+      "Look for the metric that evaluates cash flow against debt and lease obligations.",
+      "Fixed Charge Coverage Ratio measures mandatory servicing ability."
+    ],
+    "aiEnhanced": true,
+    "metadata": {
+      "createdAt": "2024-01-16T11:35:00Z",
+      "updatedAt": "2024-01-16T11:35:00Z",
+      "version": 1,
+      "author": "default",
+      "custom": false,
+      "published": true
+    }
+  }
+]

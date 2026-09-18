@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Pluto Happy & Excited -->
+  <defs>
+    <linearGradient id="goldCoat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C"/>
+      <stop offset="60%" stop-color="#FDB813"/>
+      <stop offset="100%" stop-color="#E59E0B"/>
+    </linearGradient>
+    <linearGradient id="earShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E59E0B"/>
+      <stop offset="100%" stop-color="#C67D05"/>
+    </linearGradient>
+    <linearGradient id="collarBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="100" cy="182" rx="62" ry="10" fill="#CBD5E1" opacity="0.6"/>
+
+  <!-- Happy High Tail Wagging -->
+  <g class="pluto-tail">
+    <path d="M50,140 C20,110 30,70 45,55 C52,48 62,60 52,72 C42,85 45,120 60,145 Z" fill="url(#goldCoat)"/>
+    <!-- Motion lines -->
+    <path d="M22,60 Q15,70 20,80" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M15,72 Q8,82 14,92" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Body -->
+  <g filter="url(#softShadow)">
+    <path d="M70,110 C60,125 55,145 65,168 C75,178 95,178 100,172 C105,178 125,178 135,168 C145,145 140,125 130,110 Z" fill="url(#goldCoat)"/>
+    <path d="M78,95 C75,115 80,140 100,155 C120,140 125,115 122,95 Z" fill="#FFE28A"/>
+    <path d="M80,140 L82,175 C82,179 75,182 70,180 C65,178 68,172 70,145 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="73" cy="178" rx="8" ry="5" fill="url(#goldCoat)"/>
+    <path d="M120,140 L118,175 C118,179 125,182 130,180 C135,178 132,172 130,145 Z" fill="url(#goldCoat)"/>
+    <ellipse cx="127" cy="178" rx="8" ry="5" fill="url(#goldCoat)"/>
+  </g>
+
+  <!-- Collar -->
+  <g id="plutoCollar">
+    <path d="M78,96 Q100,105 122,96 Q120,103 100,111 Q80,103 78,96 Z" fill="url(#collarBlue)"/>
+    <circle cx="100" cy="108" r="3" fill="#94A3B8"/>
+    <circle cx="100" cy="116" r="8" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+    <polygon points="100,112 102,116 106,116 103,118 104,122 100,120 96,122 97,118 94,116 98,116" fill="#F59E0B" transform="scale(0.7) translate(43, 49)"/>
+  </g>
+
+  <!-- Head -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="100" cy="62" rx="36" ry="32" fill="url(#goldCoat)"/>
+    <!-- Floppy Ears (Up slightly with joy) -->
+    <path d="M68,48 C50,45 38,65 44,88 C48,98 62,98 66,85 C68,75 70,60 70,50 Z" fill="url(#earShadow)"/>
+    <path d="M132,48 C150,45 162,65 156,88 C152,98 138,98 134,85 C132,75 130,60 130,50 Z" fill="url(#earShadow)"/>
+
+    <ellipse cx="100" cy="72" rx="22" ry="16" fill="#FFE28A"/>
+    <path d="M92,66 Q100,62 108,66 Q109,73 100,76 Q91,73 92,66 Z" fill="#1E293B"/>
+    <ellipse cx="97" cy="66" rx="3" ry="1.5" fill="#64748B"/>
+
+    <!-- Happy Open Mouth with Tongue -->
+    <path d="M92,76 Q100,80 108,76 Q110,92 100,94 Q90,92 92,76 Z" fill="#7F1D1D"/>
+    <!-- Pink Tongue -->
+    <path d="M95,84 C95,95 105,95 105,84 Z" fill="#F43F5E"/>
+
+    <!-- Happy Curved Eyes (Smiling ^ ^) -->
+    <path d="M78,54 Q85,46 92,54" fill="none" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M108,54 Q115,46 122,54" fill="none" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Joy Eyebrows -->
+    <path d="M78,45 Q85,40 91,44" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+    <path d="M109,44 Q115,40 122,45" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

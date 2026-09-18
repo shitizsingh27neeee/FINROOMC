@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Abhishek Happy / Arms Open Wide -->
+  <defs>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8B888"/>
+      <stop offset="100%" stop-color="#D49E6A"/>
+    </linearGradient>
+    <linearGradient id="navyShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0A2463"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="100" cy="100" r="92" fill="#F0FDF4" stroke="#22C55E" stroke-width="3"/>
+
+  <!-- Arms Open Wide Ready for Hug -->
+  <path d="M60,135 C30,110 20,85 15,75 C25,70 40,85 65,115 Z" fill="url(#navyShirt)"/>
+  <circle cx="18" cy="74" r="8" fill="url(#skinTone)"/>
+  <path d="M140,135 C170,110 180,85 185,75 C175,70 160,85 135,115 Z" fill="url(#navyShirt)"/>
+  <circle cx="182" cy="74" r="8" fill="url(#skinTone)"/>
+
+  <!-- Torso -->
+  <path d="M60,140 C65,120 75,115 100,115 C125,115 135,120 140,140 L140,192 L60,192 Z" fill="url(#navyShirt)"/>
+  <polygon points="100,130 84,115 96,113 100,122 104,113 116,115" fill="#FFFFFF"/>
+
+  <!-- Neck -->
+  <rect x="88" y="92" width="24" height="24" rx="4" fill="url(#skinTone)"/>
+
+  <!-- Head -->
+  <ellipse cx="100" cy="68" rx="26" ry="28" fill="url(#skinTone)"/>
+  <!-- Hair -->
+  <path d="M72,62 C70,38 84,24 100,24 C116,24 128,38 126,62 C122,48 116,34 100,34 C84,34 76,46 72,62 Z" fill="#1E293B"/>
+
+  <!-- Glasses -->
+  <rect x="76" y="60" width="18" height="15" rx="3" fill="none" stroke="#0F172A" stroke-width="2"/>
+  <rect x="106" y="60" width="18" height="15" rx="3" fill="none" stroke="#0F172A" stroke-width="2"/>
+  <line x1="94" y1="66" x2="106" y2="66" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- Eyes Happy Curves -->
+  <path d="M80,68 Q85,62 90,68" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+  <path d="M110,68 Q115,62 120,68" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Big Joyful Open Smile -->
+  <path d="M85,84 Q100,100 115,84 Q100,88 85,84 Z" fill="#9A3412"/>
+  <path d="M88,85 Q100,90 112,85" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Escape Room</title>
+  <meta name="description" content="Interactive finance learning game where Pluto the Labrador solves Indian corporate finance puzzles to reunite with Abhishek on Floor 5 of Goldman Sachs Bangalore.">
+  <meta property="og:title" content="Finance Escape Room">
+  <meta property="og:description" content="Interactive finance learning game where Pluto the Labrador solves Indian corporate finance puzzles to reunite with Abhishek on Floor 5 of Goldman Sachs Bangalore.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Fredoka One, Poppins, Comic Neue, Patrick Hand, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Fredoka+One&family=Fredoka:wght@400;500;600;700&family=Patrick+Hand&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- ==================== FLOATING BACKGROUND DOODLES ==================== -->
+  <div class="floating-doodles-layer" aria-hidden="true">
+    <!-- Drifting Sky Clouds -->
+    <div class="sky-cloud cloud-drift-1">☁️</div>
+    <div class="sky-cloud cloud-drift-2">☁️</div>
+    <div class="sky-cloud cloud-drift-3">☁️</div>
+
+    <!-- Rupee Doodle -->
+    <svg class="floating-doodle doodle-1 rupee-doodle" viewBox="0 0 50 50">
+      <circle cx="25" cy="25" r="22" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-dasharray="5,5"/>
+      <text x="25" y="34" font-size="26" text-anchor="middle" fill="#FF6B35" font-family="'Fredoka One', sans-serif" font-weight="bold">₹</text>
+    </svg>
+
+    <!-- Paw Print Doodle -->
+    <svg class="floating-doodle doodle-2 paw-doodle" viewBox="0 0 50 50">
+      <ellipse cx="25" cy="30" rx="8" ry="10" fill="#FDB813" opacity="0.7"/>
+      <circle cx="18" cy="20" r="4" fill="#FDB813" opacity="0.7"/>
+      <circle cx="25" cy="17" r="4" fill="#FDB813" opacity="0.7"/>
+      <circle cx="32" cy="20" r="4" fill="#FDB813" opacity="0.7"/>
+      <circle cx="28" cy="14" r="3" fill="#FDB813" opacity="0.7"/>
+    </svg>
+
+    <!-- Dog Bone Doodle -->
+    <svg class="floating-doodle doodle-3 bone-doodle" viewBox="0 0 60 30">
+      <rect x="20" y="12" width="20" height="6" rx="3" fill="#FFF9E6" stroke="#D4A017" stroke-width="2"/>
+      <circle cx="12" cy="15" r="7" fill="#FFF9E6" stroke="#D4A017" stroke-width="2"/>
+      <circle cx="48" cy="15" r="7" fill="#FFF9E6" stroke="#D4A017" stroke-width="2"/>
+    </svg>
+
+    <!-- Financial Chart Doodle -->
+    <svg class="floating-doodle doodle-4 chart-doodle" viewBox="0 0 50 50">
+      <polyline points="6,42 16,28 26,34 40,14" fill="none" stroke="#4CAF50" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="40,14 34,14 40,20" fill="#4CAF50"/>
+      <circle cx="16" cy="28" r="3" fill="#81C784"/>
+      <circle cx="26" cy="34" r="3" fill="#81C784"/>
+      <circle cx="40" cy="14" r="3" fill="#2E7D32"/>
+    </svg>
+
+    <!-- Sparkles Doodle -->
+    <svg class="floating-doodle doodle-5 sparkles-doodle" viewBox="0 0 50 50">
+      <path d="M 25 6 L 28 20 L 42 23 L 28 26 L 25 40 L 22 26 L 8 23 L 22 20 Z" fill="#FFD700" opacity="0.8"/>
+    </svg>
+  </div>
+
+  <!-- ==================== GAME HEADER ==================== -->
+  <header class="game-header" id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Title with Pluto & Abhishek -->
+        <div class="brand-section">
+          <div class="brand-logo-icon" aria-hidden="true">
+            <img src="/assets/pluto/pluto-sitting.svg" alt="Pluto" class="header-pluto-mini" style="width: 44px; height: 44px; object-fit: contain;">
+          </div>
+          <div>
+            <h1 class="brand-title">Finance Escape Room</h1>
+            <p class="brand-subtitle">Pluto's Journey to Abhishek • Goldman Sachs Bangalore</p>
+          </div>
+        </div>
+
+        <!-- Distance Tracker to Abhishek & Score Status -->
+        <div class="header-status-group">
+          <!-- Story Cutscene Launcher -->
+          <button class="btn-story-nav" id="btnOpenStoryModal" title="Read the story of Pluto & Abhishek">
+            <span>📖</span>
+            <span>Story</span>
+          </button>
+
+          <!-- Elevation Distance Indicator -->
+          <div class="header-distance-pill" id="headerDistanceToAbhishek" title="Pluto's Elevation toward Abhishek">
+            🐾 <strong>Floor 1/5</strong> • 4 floors to Abhishek!
+          </div>
+
+          <div class="score-badge" id="headerScoreBadge" title="Total Career Points for Treats">
+            <span>🪙</span>
+            <span id="headerTotalScore">0</span>
+          </div>
+          <div class="streak-counter" id="headerStreakBadge" title="Consecutive Correct Answers">
+            <span>🔥</span>
+            <span id="headerStreakCount">0</span>
+          </div>
+        </div>
+
+        <!-- Action Tools -->
+        <div class="header-actions">
+          <button class="btn-icon-nav" id="btnOpenStats" title="View Performance Statistics" aria-label="Statistics">
+            📊
+          </button>
+          <button class="btn-icon-nav" id="btnOpenVault" title="Open Review Vault" aria-label="Review Vault">
+            📚
+          </button>
+          <button class="btn-icon-nav" id="btnOpenSettings" title="AI & Game Settings" aria-label="Settings">
+            ⚙️
+          </button>
+          <a href="/admin.html" class="btn-cms-nav" id="btnGoToAdmin" title="Content Management System">
+            <span>🛠️</span>
+            <span>CMS</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 5-LEVEL PROGRESSION TABS ==================== -->
+  <nav class="level-tabs-bar" aria-label="Level Progression Navigation">
+    <div class="container">
+      <div class="level-tabs-scroll" id="levelTabsContainer">
+        <!-- Populated dynamically by game.js -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN GAMEPLAY CONTAINER ==================== -->
+  <main class="main-game-layout">
+    <div class="container">
+
+      <!-- ==================== 1. ILLUSTRATED BUILDING MAP SCREEN ==================== -->
+      <section class="building-map-section" id="buildingMapSection">
+        <div class="building-map-header">
+          <div class="map-badge-pill">🏢 ISOMETRIC CAMPUS TOWER</div>
+          <h2 class="building-map-title">PLUTO'S JOURNEY TO ABHISHEK</h2>
+          <p class="building-map-subtitle">Goldman Sachs Bangalore • Helios Business Park • Unlock 5 Floors to the Partner's Office!</p>
+        </div>
+
+        <!-- Modern 5-Story Building Map with Isometric Architectural Perspective -->
+        <div class="building-map">
+          <!-- Ambient Sky Elements -->
+          <div class="isometric-sky-elements" aria-hidden="true">
+            <div class="sky-sun-glow"></div>
+            <div class="floating-kite">🪁</div>
+            <div class="bengaluru-clouds">☁️ ☁️</div>
+          </div>
+
+          <!-- Building Exterior Wrapper (Tower + External Glass Elevator Column) -->
+          <div class="isometric-campus-wrapper">
+            <!-- External Glass Elevator & Paw Track Shaft -->
+            <aside class="tower-elevator-shaft" aria-label="Pluto's Elevation Shaft">
+              <div class="elevator-spire-cap">🛗</div>
+              <div class="elevator-cable"></div>
+              
+              <!-- Floor Indicators on Shaft -->
+              <div class="elevator-stop stop-5" data-floor="5"><span class="stop-dot"></span><span class="stop-lbl">F5</span></div>
+              <div class="elevator-stop stop-4" data-floor="4"><span class="stop-dot"></span><span class="stop-lbl">F4</span></div>
+              <div class="elevator-stop stop-3" data-floor="3"><span class="stop-dot"></span><span class="stop-lbl">F3</span></div>
+              <div class="elevator-stop stop-2" data-floor="2"><span class="stop-dot"></span><span class="stop-lbl">F2</span></div>
+              <div class="elevator-stop stop-1" data-floor="1"><span class="stop-dot"></span><span class="stop-lbl">F1</span></div>
+
+              <!-- Animated Elevator Car following Pluto -->
+              <div class="elevator-car" id="elevatorCar" style="bottom: 12%;">
+                <div class="car-glass">
+                  <span class="car-paw">🐾</span>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Main Building Isometric Tower -->
+            <div class="building-tower" id="buildingTower">
+              <!-- Roof Crest, Helipad & Spire -->
+              <div class="building-roof">
+                <div class="antenna-spire"></div>
+                <div class="helipad-circle" title="Goldman Sachs Tower Helipad">
+                  <span class="helipad-letter">H</span>
+                </div>
+                <div class="roof-crest">
+                  <span class="crest-icon">🏢</span>
+                  <span class="crest-text">GOLDMAN SACHS BANGALORE</span>
+                  <span class="crest-flag">🇮🇳</span>
+                </div>
+              </div>
+
+              <!-- Floor 5: Partner's Executive Office (Abhishek's Destination) -->
+              <div class="floor floor-5 locked" data-floor="5" id="towerFloor5">
+                <div class="floor-3d-edge" aria-hidden="true"></div>
+                <div class="floor-header-row">
+                  <div class="floor-title-badge">
+                    <span class="floor-num">Floor 5</span>
+                    <span class="floor-name">Partner's Executive Suite</span>
+                    <span class="floor-theme-tag">🏆 Destination</span>
+                  </div>
+                  <div class="abhishek-callout" id="abhishekFloorCallout">
+                    <span class="sparkle">✨</span>
+                    <span class="abhishek-label">Abhishek is here! 🍗</span>
+                    <span class="sparkle">✨</span>
+                  </div>
+                </div>
+                <div class="floor-interior">
+                  <div class="floor-doors" id="floorDoors5">
+                    <!-- Rooms 5.1, 5.2, 5.3 rendered by game.js -->
+                  </div>
+                  <!-- Floor Character Avatar Slot (Abhishek waving or Pluto joining) -->
+                  <div class="floor-occupant-zone">
+                    <div class="abhishek-window-wrapper" title="Abhishek waving to Pluto from Floor 5!">
+                      <img src="/assets/abhishek/abhishek-happy.svg" alt="Abhishek waving to Pluto from Floor 5!" class="abhishek-window">
+                    </div>
+                    <div class="floor-pluto-slot" id="plutoFloorSlot5"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paw Trail Connector -->
+              <div class="tower-connector">
+                <span class="paw-connector">🐾</span>
+                <span class="connector-line"></span>
+                <span class="paw-connector">🐾</span>
+              </div>
+
+              <!-- Floor 4: Executive Boardrooms & M&A Strategy -->
+              <div class="floor floor-4 locked" data-floor="4" id="towerFloor4">
+                <div class="floor-3d-edge" aria-hidden="true"></div>
+                <div class="floor-header-row">
+                  <div class="floor-title-badge">
+                    <span class="floor-num">Floor 4</span>
+                    <span class="floor-name">Boardrooms &amp; M&amp;A Strategy</span>
+                    <span class="floor-theme-tag">🤝 Dealmaking</span>
+                  </div>
+                </div>
+                <div class="floor-interior">
+                  <div class="floor-doors" id="floorDoors4">
+                    <!-- Rooms 4.1, 4.2, 4.3 -->
+                  </div>
+                  <div class="floor-occupant-zone">
+                    <div class="floor-pluto-slot" id="plutoFloorSlot4"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tower-connector">
+                <span class="paw-connector">🐾</span>
+                <span class="connector-line"></span>
+                <span class="paw-connector">🐾</span>
+              </div>
+
+              <!-- Floor 3: FinTech & Quantitative Modeling Lab -->
+              <div class="floor floor-3 locked" data-floor="3" id="towerFloor3">
+                <div class="floor-3d-edge" aria-hidden="true"></div>
+                <div class="floor-header-row">
+                  <div class="floor-title-badge">
+                    <span class="floor-num">Floor 3</span>
+                    <span class="floor-name">Financial Tech &amp; Quant Modeling</span>
+                    <span class="floor-theme-tag">💻 Bloomberg Desks</span>
+                  </div>
+                </div>
+                <div class="floor-interior">
+                  <div class="floor-doors" id="floorDoors3">
+                    <!-- Rooms 3.1, 3.2, 3.3 -->
+                  </div>
+                  <div class="floor-occupant-zone">
+                    <div class="floor-pluto-slot" id="plutoFloorSlot3"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tower-connector">
+                <span class="paw-connector">🐾</span>
+                <span class="connector-line"></span>
+                <span class="paw-connector">🐾</span>
+              </div>
+
+              <!-- Floor 2: Technical Interview Drill & Cubicles -->
+              <div class="floor floor-2 locked" data-floor="2" id="towerFloor2">
+                <div class="floor-3d-edge" aria-hidden="true"></div>
+                <div class="floor-header-row">
+                  <div class="floor-title-badge">
+                    <span class="floor-num">Floor 2</span>
+                    <span class="floor-name">Technical Interview Drill Rooms</span>
+                    <span class="floor-theme-tag">💼 Case Analysis</span>
+                  </div>
+                </div>
+                <div class="floor-interior">
+                  <div class="floor-doors" id="floorDoors2">
+                    <!-- Rooms 2.1, 2.2, 2.3 -->
+                  </div>
+                  <div class="floor-occupant-zone">
+                    <div class="floor-pluto-slot" id="plutoFloorSlot2"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tower-connector">
+                <span class="paw-connector">🐾</span>
+                <span class="connector-line"></span>
+                <span class="paw-connector">🐾</span>
+              </div>
+
+              <!-- Floor 1: Campus Recruitment Ground & Reception Atrium -->
+              <div class="floor floor-1 active" data-floor="1" id="towerFloor1">
+                <div class="floor-3d-edge" aria-hidden="true"></div>
+                <div class="floor-header-row">
+                  <div class="floor-title-badge">
+                    <span class="floor-num">Floor 1</span>
+                    <span class="floor-name">Campus Recruitment Atrium</span>
+                    <span class="floor-theme-tag">🏛️ Placement Drive</span>
+                  </div>
+                  <div class="pluto-tag-badge" id="floor1PlutoTag">
+                    <span>🐕 Pluto is here!</span>
+                  </div>
+                </div>
+                <div class="floor-interior">
+                  <div class="floor-doors" id="floorDoors1">
+                    <!-- Rooms 1.1, 1.2, 1.3 -->
+                  </div>
+                  <div class="floor-occupant-zone">
+                    <div class="floor-pluto-slot" id="plutoFloorSlot1">
+                      <!-- Pluto starts here on Floor 1 -->
+                      <div class="floor-pluto-avatar" title="Pluto is exploring Floor 1">
+                        <img src="/assets/pluto/pluto-sitting.svg" alt="Pluto on Floor 1" class="pluto-character-mini">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ground Level Lawn, Trees & Bengaluru Campus Plaque -->
+              <div class="ground-level">
+                <div class="lawn-foliage">
+                  <span class="bush" title="Lush Cubbon Park Trees">🌳</span>
+                  <span class="flower-cluster">🌺🌸</span>
+                  <div class="campus-monolith-sign" title="Goldman Sachs Bengaluru Atrium Entrance">
+                    <span class="monolith-logo">GS</span>
+                    <span class="monolith-text">Helios Tech Park • East Wing Gate</span>
+                  </div>
+                  <span class="flower-cluster">🌸🌺</span>
+                  <span class="bush">🌳</span>
+                </div>
+                <div class="cobblestone-pavement">
+                  <span class="paw-stone">🐾</span>
+                  <span class="paw-stone">🐾</span>
+                  <span class="paw-stone">🐾</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Mission Card Overlay - Bottom of Screen -->
+        <div class="mission-card-overlay" id="plutoMissionCard">
+          <div class="mission-card">
+            <!-- Torn paper jagged edge -->
+            <div class="mission-torn-edge"></div>
+            
+            <div class="mission-header">
+              <div class="mission-badge">🐕 PLUTO'S CURRENT MISSION</div>
+              <div class="mission-room-badge" id="missionRoomBadge">📍 Room 1.1: Balance Sheet Detective</div>
+            </div>
+
+            <div class="mission-body">
+              <p class="mission-target" id="missionTargetText">
+                🎯 Solve finance puzzles with <strong>≥80% accuracy</strong> to unlock the next floor!
+              </p>
+              
+              <div class="mission-progress-bar">
+                <div class="mission-progress-label">
+                  <span id="missionProgressText">Progress: 0% (0/5 doors cleared)</span>
+                  <span id="missionFloorsLeft">4 floors to Abhishek! 🐾</span>
+                </div>
+                <div class="mission-progress-track">
+                  <div class="mission-progress-fill" id="missionProgressFill" style="width: 10%;"></div>
+                </div>
+              </div>
+
+              <!-- Message Bubble with Abhishek's Portrait -->
+              <div class="abhishek-mission-bubble">
+                <div class="abhishek-mini-avatar">
+                  <img src="/assets/abhishek/abhishek-portrait.svg" alt="Abhishek" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="abhishek-bubble-text" id="missionAbhishekQuote">
+                  "Great job Pluto! I can hear you getting closer! Keep your paws steady and solve those Indian corporate ratios! 🐾"
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-footer">
+              <button class="btn-continue-solving" id="btnContinueMission">
+                🐾 CONTINUE SOLVING →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horizontal Room Fallback Container (managed by game.js) -->
+      <section class="room-map-grid hidden" id="roomMapContainer" aria-label="Room Map Grid">
+        <!-- 3 Connected Room Cards -->
+      </section>
+
+      <!-- ==================== 2. ILLUSTRATED SECURITY PUZZLE DOOR SCREEN ==================== -->
+      <section class="question-screen hidden" id="roomPlayArena" aria-live="polite">
+        <!-- Office background illustration -->
+        <div class="office-background"></div>
+
+        <!-- Main Illustrated Security Vault Door -->
+        <div class="puzzle-door">
+          <!-- Heavy Vault Door Hinges on the Left -->
+          <div class="door-hinge door-hinge-top" aria-hidden="true"></div>
+          <div class="door-hinge door-hinge-bottom" aria-hidden="true"></div>
+
+          <!-- Door Rivets along Arch -->
+          <div class="door-rivets-arch" aria-hidden="true">
+            <span class="door-rivet"></span>
+            <span class="door-rivet"></span>
+            <span class="door-rivet"></span>
+            <span class="door-rivet"></span>
+            <span class="door-rivet"></span>
+            <span class="door-rivet"></span>
+            <span class="door-rivet"></span>
+          </div>
+
+          <div class="door-brass-arch">
+            <div class="security-puzzle-tag">🔐 SECURITY VAULT PUZZLE</div>
+            <div class="door-room-title" id="doorRoomTitle">Door 1.1 • Reliance Industries</div>
+          </div>
+
+          <!-- Question Card Inside Door (Parchment Case Brief pinned with Clipboard Clip) -->
+          <div class="question-card">
+            <!-- Brass Clipboard Clip on Top -->
+            <div class="clipboard-brass-clip" aria-hidden="true">
+              <div class="clip-bracket"></div>
+              <div class="clip-spring"></div>
+            </div>
+
+            <!-- Indian Placement Official Case Seal -->
+            <div class="official-case-stamp" aria-hidden="true">
+              <span class="stamp-city">DALAL STREET</span>
+              <span class="stamp-title">OFFICIAL CASE</span>
+            </div>
+
+            <div class="question-progress">
+              <div class="question-progress-dots" id="questionProgressDots"></div>
+              <div class="question-counter" id="currentQuestionNumberLabel">Question 1 of 5</div>
+            </div>
+
+            <div class="question-meta-bar">
+              <span class="type-badge" id="questionTypeBadge">Balance Sheet • EASY</span>
+              <button class="btn-flag-q" id="btnFlagQuestion" title="Bookmark for Review Vault">
+                🏳️ Flag
+              </button>
+            </div>
+
+            <h3 class="active-question-text" id="activeQuestionText">
+              Loading puzzle...
+            </h3>
+
+            <!-- Dynamic Hint Box (Abhishek's Sticky Note) -->
+            <div id="questionHintBox" class="hidden"></div>
+          </div>
+
+          <!-- Vault Door Lock Mechanism Plate (Dial + Keyway + Security LED) -->
+          <div class="door-lock-mechanism">
+            <!-- Heavy Brass Combination Dial -->
+            <div class="door-combination-dial" id="doorCombinationDial" title="Combination Tumbler Dial">
+              <div class="dial-outer-ring">
+                <div class="dial-marks"></div>
+                <div class="dial-inner-knob">
+                  <span class="dial-pointer">▲</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Keyhole Plate -->
+            <div class="door-keyhole-plate" title="Master Override Keyway">
+              <div class="door-keyhole"></div>
+            </div>
+
+            <!-- Security LED Indicator -->
+            <div class="security-status-indicator" id="securityStatusIndicator" title="Door Lock Status">
+              <span class="status-led-bulb" id="statusLedBulb"></span>
+              <span class="status-led-label" id="statusLedLabel">LOCKED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Answer Options as Colorful 2x2 Grid -->
+        <div class="options-grid" id="questionOptionsGrid" role="radiogroup">
+          <!-- Populated dynamically by game.js -->
+        </div>
+
+        <!-- Pluto's Speech Bubble Above Action Buttons -->
+        <div class="pluto-speech" id="puzzlePlutoSpeech">
+          <div class="pluto-speech-text" id="puzzlePlutoSpeechText">
+            "Look closely at the Indian corporate metrics! Abhishek taught us this formula!"
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button class="btn-hint" id="btnRequestHint">
+            💡 Hint (-5 pts)
+          </button>
+          <button class="btn-fifty-fifty" id="btnFiftyFifty">
+            🎲 50/50 Lifeline
+          </button>
+          <button class="btn-submit" id="btnSubmitAnswer" disabled>
+            ✓ UNLOCK DOOR →
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== PLUTO COMPANION CHARACTER (ALWAYS VISIBLE) ==================== -->
+  <div class="pluto-character-container" id="plutoCharacter" title="Pluto the Golden Labrador (Click to Pet!)">
+    <!-- Dynamic Speech Bubble -->
+    <div class="pluto-speech-bubble hidden" id="plutoSpeechBubble">
+      <div class="pluto-speech-arrow"></div>
+      <p class="pluto-speech-text" id="plutoSpeechText">
+        Woof! Abhishek taught me this during our study sessions! 🐾
+      </p>
+    </div>
+
+    <!-- Pluto Animated Character Sprite (Expressive States) -->
+    <div class="pluto-sprite-container">
+      <img src="/assets/pluto/pluto-sitting.svg" alt="Pluto the Golden Labrador" id="plutoSpriteImg" class="pluto-sprite-img">
+    </div>
+  </div>
+
+  <!-- ==================== 3. ABHISHEK'S HANDWRITTEN POLAROID MESSAGE MODAL ==================== -->
+  <div class="message-card-overlay hidden" id="abhishekMessageModal" role="dialog" aria-modal="true">
+    <div class="message-card">
+      <!-- Torn paper jagged edge -->
+      <div class="paper-tear"></div>
+
+      <!-- Polaroid-style header -->
+      <div class="message-header">
+        <div class="abhishek-photo">
+          <img src="/assets/abhishek/abhishek-portrait.svg" alt="Abhishek" class="abhishek-portrait-img" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+        </div>
+        <div class="message-meta">
+          <h3 class="message-from">Message from Abhishek</h3>
+          <p class="message-time" id="abhishekMsgTime">📱 Just now • <span id="abhishekMsgFloorBadge">Floor 1 • Campus Area</span></p>
+        </div>
+        <button class="polaroid-voice-btn" id="btnToggleVoiceMessage" title="Toggle audio read-aloud">
+          🔊 Read Voice
+        </button>
+      </div>
+
+      <!-- Handwritten Message Body -->
+      <div class="message-body">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="font-bold text-amber-900" id="abhishekMsgRoomTitle" style="font-family: var(--font-display); margin: 0;">Security Door 1.1 Unlocked!</h4>
+          <span class="polaroid-encouragement-badge" id="abhishekMsgEncouragement">Keep going, Pluto!</span>
+        </div>
+        <p class="message-text handwriting" id="abhishekMsgBody">
+          Good boy, Pluto! You cracked the ratios! Remember when we practiced these during our Sunday walks around Cubbon Park? You're making amazing progress! Keep those paws moving, champ! 🐾
+        </p>
+      </div>
+
+      <!-- Doodles in Margins -->
+      <div class="message-doodles" aria-hidden="true">
+        <svg class="doodle-heart-paw" viewBox="0 0 50 50">
+          <path d="M 25 15 Q 18 5 10 15 Q 5 25 25 40 Q 45 25 40 15 Q 32 5 25 15" fill="#FF6B9D" opacity="0.7"/>
+          <ellipse cx="25" cy="24" rx="4" ry="5" fill="#FFF"/>
+          <circle cx="20" cy="18" r="2" fill="#FFF"/>
+          <circle cx="30" cy="18" r="2" fill="#FFF"/>
+        </svg>
+        <svg class="doodle-rupee-bone" viewBox="0 0 60 30">
+          <rect x="20" y="12" width="20" height="6" rx="2" fill="#FFF" stroke="#FF9800" stroke-width="1.5"/>
+          <circle cx="14" cy="15" r="6" fill="#FFF" stroke="#FF9800" stroke-width="1.5"/>
+          <circle cx="46" cy="15" r="6" fill="#FFF" stroke="#FF9800" stroke-width="1.5"/>
+          <text x="30" y="17" font-size="9" text-anchor="middle" fill="#FF9800" font-weight="bold">₹</text>
+        </svg>
+        <svg class="doodle-sparkles" viewBox="0 0 50 50">
+          <path d="M 25 5 L 28 20 L 43 23 L 28 26 L 25 41 L 22 26 L 7 23 L 22 20 Z" fill="#FFD700"/>
+        </svg>
+      </div>
+
+      <!-- Signature -->
+      <div class="message-signature">
+        <p class="signature-text" id="abhishekMsgSig">- Abhishek ❤️🐾</p>
+        <div class="signature-underline"></div>
+      </div>
+
+      <!-- Continue Button -->
+      <button class="btn-continue" id="btnContinueFromAbhishek">
+        🐾 Keep Going! →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== STORY CUTSCENE MODAL (OPENING SEQUENCE) ==================== -->
+  <div class="modal-overlay hidden" id="storyCutsceneModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog cutscene-dialog" style="max-width: 620px;">
+      <div class="cutscene-card">
+        <div class="cutscene-header">
+          <span class="cutscene-badge" id="storyCutsceneBadge">Panel 1 of 6 • Goldman Sachs Bangalore</span>
+          <button class="cutscene-skip-btn" id="btnStorySkip">Skip Story ✕</button>
+        </div>
+
+        <div class="cutscene-image-wrapper">
+          <img src="/assets/abhishek/abhishek-standing.svg" alt="Cutscene Illustration" id="storyCutsceneImg" class="cutscene-img">
+        </div>
+
+        <div class="cutscene-content">
+          <h3 class="cutscene-title" id="storyCutsceneTitle">Bring Your Pet to Work Day</h3>
+          <p class="cutscene-text" id="storyCutsceneText">
+            Abhishek, a finance analyst at Goldman Sachs Bangalore, brought his beloved Golden Labrador Pluto to the office for 'Bring Your Pet to Work Day'...
+          </p>
+        </div>
+
+        <div class="cutscene-footer">
+          <div class="cutscene-dots" id="storyCutsceneDots"></div>
+          <div class="cutscene-actions">
+            <button class="btn-outline px-4 py-2" id="btnStoryPrev">← Previous</button>
+            <button class="btn-primary px-5 py-2" id="btnStoryNext">Next →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GRAND REUNION MODAL (ROOM 5.3 COMPLETION) ==================== -->
+  <div class="modal-overlay hidden" id="grandReunionModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog reunion-dialog" style="max-width: 650px;">
+      <div class="reunion-card">
+        <div class="reunion-header-banner">
+          <div class="text-4xl mb-1">🎉 ❤️ 🐕 👨‍💼 🎉</div>
+          <h2 class="text-2xl font-black text-amber-900" id="reunionSceneTitle">The Warmest Embrace</h2>
+          <span class="reunion-badge" id="reunionSceneBadge">Floor 5 • Partner's Office</span>
+        </div>
+
+        <div class="reunion-media-box">
+          <img src="/assets/abhishek/abhishek-reunion.svg" alt="Abhishek and Pluto Reunited" id="reunionSceneImg" class="reunion-img">
+        </div>
+
+        <div class="reunion-body">
+          <p class="reunion-text" id="reunionSceneText">
+            Abhishek catches Pluto mid-air in a tight, warm hug. Pluto licks Abhishek's cheek with pure joy!
+          </p>
+        </div>
+
+        <div class="reunion-footer">
+          <button class="btn-primary px-6 py-2.5" id="btnReunionNext">Next Scene →</button>
+          <button class="btn-primary px-6 py-2.5 bg-green-600 hover:bg-green-700 hidden" id="btnReunionClose">
+            Celebrate &amp; View Summary 🏆
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SUCCESS MODAL (CORRECT ANSWER) ==================== -->
+  <div class="modal-overlay hidden" id="successModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 460px; text-align: center;">
+      <div class="modal-header-banner banner-success">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🐾 ✅</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800;">Pluto Cracks the Puzzle!</h3>
+        <p style="font-size: 0.9rem; opacity: 0.9;" id="successStreakBonusLabel">Tail wagging at maximum speed!</p>
+      </div>
+      <div class="modal-body-content">
+        <div style="font-size: 1.8rem; font-weight: 800; color: var(--success); margin: 0.75rem 0;" id="successPointsEarnedLabel">
+          +100 Points
+        </div>
+        <p class="text-secondary" style="font-size: 0.88rem;">
+          One step closer to Abhishek on Floor 5! Keep up the momentum to unlock this floor's door.
+        </p>
+      </div>
+      <div class="modal-footer-actions" style="justify-content: center;">
+        <button class="btn-primary" id="btnSuccessContinue" style="width: 100%;">
+          Continue to Next Question →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== EXPLANATION MODAL (WRONG ANSWER) ==================== -->
+  <div class="modal-overlay hidden" id="explanationModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header-banner banner-wrong">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.8rem;">🐕💭</span>
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800;">Learning from Every Attempt!</h3>
+              <p style="font-size: 0.82rem; opacity: 0.9;">Pluto saved this to the Review Vault to master before interview rounds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body-content">
+        <!-- Your Answer -->
+        <div class="explanation-section section-your-answer" id="modalWrongYourAnswerText">
+          ❌ You selected: ...
+        </div>
+
+        <!-- Correct Answer -->
+        <div class="explanation-section section-correct-answer" id="modalWrongCorrectAnswerText">
+          ✓ Correct Answer: ...
+        </div>
+
+        <!-- Pedagogical Explanation -->
+        <div class="explanation-section section-core-expl">
+          <h4 style="font-size: 0.85rem; font-weight: 800; color: var(--navy-primary); margin-bottom: 0.4rem;">
+            💡 WHAT ABHISHEK TAUGHT PLUTO
+          </h4>
+          <div id="modalWrongStaticExplanation" style="font-size: 0.92rem; line-height: 1.5;"></div>
+          <!-- AI Personalized Feedback Insertion -->
+          <div id="modalWrongAiExplanation"></div>
+        </div>
+
+        <!-- Real Indian Corporate Example -->
+        <div class="explanation-section section-example">
+          <h4 style="font-size: 0.82rem; font-weight: 800; color: var(--gold-dark); margin-bottom: 0.35rem;">
+            📊 REAL INDIAN CORPORATE BENCHMARK
+          </h4>
+          <div id="modalWrongExampleText"></div>
+        </div>
+
+        <!-- Dalal Street Interview Tip -->
+        <div class="explanation-section section-tip">
+          <h4 style="font-size: 0.82rem; font-weight: 800; color: #0284C7; margin-bottom: 0.35rem;">
+            🎯 DALAL STREET INTERVIEW TIP
+          </h4>
+          <div id="modalWrongTipText" style="font-size: 0.9rem;"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer-actions">
+        <button class="btn-outline" id="btnTrySimilarQuestion" title="AI generates a similar question to solidify this concept">
+          ⚡ Try Similar Question
+        </button>
+        <button class="btn-primary" id="btnExplanationNext">
+          Next Question →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ROOM COMPLETE MODAL ==================== -->
+  <div class="modal-overlay hidden" id="roomCompleteModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px; text-align: center;">
+      <div class="modal-header-banner banner-success">
+        <div style="font-size: 3rem;">⭐ 🐾 ⭐</div>
+        <h3 style="font-size: 1.5rem; font-weight: 800; margin-top: 0.5rem;" id="roomCompleteTitle">ROOM ESCAPED!</h3>
+        <p style="font-size: 0.88rem; opacity: 0.95;">Pluto cleared the security protocol!</p>
+      </div>
+      <div class="modal-body-content">
+        <div id="roomCompleteStats"></div>
+        <p class="text-secondary" style="font-size: 0.88rem; margin-top: 1rem;">
+          The next door is unlocked! Abhishek's collar jingles and encouraging messages guide Pluto higher.
+        </p>
+      </div>
+      <div class="modal-footer-actions" style="justify-content: space-between;">
+        <button class="btn-outline" id="btnRoomCompleteReview">
+          Review Mistakes
+        </button>
+        <button class="btn-primary" id="btnRoomCompleteNext">
+          Next Room →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ROOM FAIL MODAL ==================== -->
+  <div class="modal-overlay hidden" id="roomFailModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 500px; text-align: center;">
+      <div class="modal-header-banner" style="background: linear-gradient(135deg, #F59E0B, #B45309);">
+        <div style="font-size: 2.5rem;">🐕🐾</div>
+        <h3 style="font-size: 1.35rem; font-weight: 800;" id="roomFailTitle">Don't Give Up! Abhishek Believes in You</h3>
+        <p style="font-size: 0.85rem; opacity: 0.95;">Passing requirement: 80% accuracy</p>
+      </div>
+      <div class="modal-body-content">
+        <div id="roomFailStats"></div>
+        <p class="text-secondary" style="font-size: 0.85rem;">
+          Take a deep breath! Review your missed questions in the Review Vault or retry the room with fresh numbers. Abhishek is waiting on Floor 5!
+        </p>
+      </div>
+      <div class="modal-footer-actions" style="justify-content: space-between;">
+        <button class="btn-outline" id="btnRoomFailVault">
+          Open Review Vault
+        </button>
+        <button class="btn-primary" id="btnRoomFailRetry">
+          Try Again ↺
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SETTINGS MODAL ==================== -->
+  <div class="modal-overlay hidden" id="settingsModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 500px;">
+      <div class="modal-header-banner banner-navy">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="font-size: 1.25rem; font-weight: 800;">⚙️ Game &amp; AI Settings</h3>
+          <button class="btn-close-panel" id="btnCloseSettings" style="color: white;">×</button>
+        </div>
+      </div>
+      <form id="formSettings">
+        <div class="modal-body-content">
+          <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.35rem;">
+              Google AI Studio (Gemini) API Key
+            </label>
+            <input type="password" id="settingApiKeyInput" class="form-control" placeholder="AIzaSy... (optional override)">
+            <p class="text-secondary" style="font-size: 0.75rem; margin-top: 0.35rem;">
+              The app automatically connects to the server-side Gemini integration.
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding: 0.75rem; background: var(--bg-main); border-radius: 8px;">
+            <div>
+              <div style="font-weight: 700; font-size: 0.9rem;">Enable AI Explanations &amp; Hints</div>
+              <div class="text-secondary" style="font-size: 0.78rem;">Provides personalized Dalal Street mentor feedback</div>
+            </div>
+            <input type="checkbox" id="settingAiEnabledToggle" checked style="width: 20px; height: 20px;">
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button type="submit" class="btn-primary">Save Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== STATS SLIDE-OUT PANEL ==================== -->
+  <aside class="side-panel" id="statsPanel" aria-label="Performance Statistics">
+    <div class="side-panel-header">
+      <div>
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-primary);">📊 Performance Stats</h3>
+        <p class="text-secondary" style="font-size: 0.78rem;">Track Pluto's finance interview readiness</p>
+      </div>
+      <button class="btn-close-panel" id="btnCloseStats" aria-label="Close Stats">×</button>
+    </div>
+
+    <div class="side-panel-body">
+      <!-- Accuracy Card -->
+      <div style="background: var(--navy-tint); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary);">Overall Accuracy</span>
+          <span style="font-size: 1.75rem; font-weight: 900; color: var(--navy-primary);" id="statsOverallAccuracy">0%</span>
+        </div>
+        <div style="width: 100%; background: #CBD5E1; height: 8px; border-radius: 9999px; overflow: hidden;">
+          <div id="statsAccuracyBarFill" style="height: 8px; background: var(--navy-primary); width: 0%; transition: width 0.6s ease;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.78rem; margin-top: 0.75rem; color: var(--text-secondary);">
+          <span>Total Points: <strong id="statsTotalScore" class="text-navy">0</strong></span>
+          <span>Best Streak: <strong id="statsBestStreak" class="text-navy">0</strong></span>
+        </div>
+      </div>
+
+      <!-- Strengths -->
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--success); letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          Strong Areas (≥75% Accuracy)
+        </h4>
+        <div id="statsStrongTopicsList"></div>
+      </div>
+
+      <!-- Growth Opportunities -->
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--amber); letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          Focus Needed (&lt;75% Accuracy)
+        </h4>
+        <div id="statsWeakTopicsList"></div>
+      </div>
+
+      <!-- Unlocked Achievements -->
+      <div>
+        <h4 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--navy-primary); letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          Achievements Unlocked
+        </h4>
+        <div id="statsAchievementsList" style="display: flex; flex-direction: column; gap: 0.5rem;"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== REVIEW VAULT SLIDE-OUT PANEL ==================== -->
+  <aside class="side-panel" id="vaultPanel" aria-label="Review Vault">
+    <div class="side-panel-header">
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-primary);">📚 Review Vault</h3>
+          <span class="badge badge-sm badge-outline" id="vaultTotalCountBadge">0 questions</span>
+        </div>
+        <p class="text-secondary" style="font-size: 0.78rem;">Missed questions retained for interview revision</p>
+      </div>
+      <button class="btn-close-panel" id="btnCloseVault" aria-label="Close Vault">×</button>
+    </div>
+
+    <div style="padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border-color); background: #F8FAFC;">
+      <input type="text" id="vaultSearchInput" placeholder="Search missed questions..." style="width: 100%; padding: 0.45rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; font-size: 0.85rem;">
+      <div style="display: flex; gap: 0.35rem; margin-top: 0.6rem; overflow-x: auto;" id="vaultFilterTabs">
+        <button class="vault-tab active btn-xs btn-outline" data-filter="all">All</button>
+        <button class="vault-tab btn-xs btn-outline" data-filter="unmastered">Pending</button>
+        <button class="vault-tab btn-xs btn-outline" data-filter="mastered">Mastered</button>
+        <button class="vault-tab btn-xs btn-outline" data-filter="flagged">Flagged</button>
+        <button class="vault-tab btn-xs btn-outline" data-filter="hard">Hard</button>
+      </div>
+    </div>
+
+    <div class="side-panel-body" id="vaultListContainer">
+      <!-- Vault question items rendered by vault.js / game.js -->
+    </div>
+
+    <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); background: #F8FAFC;">
+      <button class="btn-primary" id="btnPracticeWeakVault" style="width: 100%; justify-content: center;">
+        ⚡ Practice Weak Topics
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div id="toastContainer" aria-live="polite"></div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="/js/config.js"></script>
+  <script src="/js/progress.js"></script>
+  <script src="/js/questions.js"></script>
+  <script src="/js/stats.js"></script>
+  <script src="/js/vault.js"></script>
+  <script src="/js/ai-handler.js"></script>
+  <script src="/js/pluto-character.js"></script>
+  <script src="/js/abhishek-messages.js"></script>
+  <script src="/js/narrative.js"></script>
+  <script src="/js/game.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // 1. Initialize Pluto Character Companion
+      window.plutoCharacter = new window.PlutoCharacter();
+
+      // 2. Initialize Abhishek Message System
+      window.abhishekMessages = new window.AbhishekMessageSystem();
+
+      // 3. Initialize Core Game Engine
+      const engine = new window.GameEngine();
+      await engine.init();
+      window.gameEngine = engine;
+
+      // 4. Initialize Narrative Manager
+      window.narrativeManager = new window.NarrativeManager(engine);
+      engine.narrativeManager = window.narrativeManager;
+      engine.abhishekMessages = window.abhishekMessages;
+      engine.plutoCharacter = window.plutoCharacter;
+
+      // Initial distance calculation
+      window.narrativeManager.updateDistance(engine.currentRoomId, engine.progressManager.getProgress().clearedRooms?.length || 0);
+    });
+  </script>
+</body>
+</html>
